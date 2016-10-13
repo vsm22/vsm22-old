@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+$mainFontFamily: 'Raleway', Arial, sans-serif;
+
+body {
+  font-family: $mainFontFamily;
+  font-size: 16px;
+
+  #main-wrap {
+    height: 100%;
+    margin: 0;
+    padding: 2em 2em 2em 2em;
+
+
+    #main-header {
+      background: linear-gradient(rgba(255,255,255,0.5), rgba(200,200,200,0.5));
+
+      h1.main-title {
+        margin: 0;
+        margin-bottom: 0.2em;
+        font-family: $mainFontFamily;
+        font-size: 2.7em;
+        font-weight: 800;
+        color: #4c4c4c;
+        letter-spacing: 0em;
+      }
+
+      div.main-subtitle {
+        h2 {
+          display: inline-block;
+          margin-top: 0;
+          font-size: 1.5em;
+          color: #626262;
+
+          div {
+            display: block;
+            text-align: justify;
+          }
+        }
+      }
+
+      #main-nav {
+        display: inline-block;
+        margin: 0;
+        padding-top: 1em;
+        border-top: 1px solid #c5c5c5;
+
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+
+          li {
+            margin: 0;
+            display: inline-block;
+
+            a {
+              font-size: 1.2em;
+              margin-right: 1em;
+              text-decoration: none;
+              font-family: $mainFontFamily;
+              color: #565656;
+
+              &:hover {
+                color: #777;
+              }
+            }
+          }
+
+          // prevent the line over the menu from moving past menu items
+          li:nth-child(4) {
+            a {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+
+
+  }
+}
