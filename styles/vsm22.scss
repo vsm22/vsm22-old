@@ -6,23 +6,38 @@ body {
   font-family: $mainFontFamily;
   font-size: 16px;
 
+  #backgroundCanvas {
+    position: absolute;
+    z-index: -10;
+  }
+
   #main-wrap {
     height: 100%;
     margin: 0;
     padding: 2em 2em 2em 2em;
-
+    background: none;
 
     #main-header {
-      background: linear-gradient(rgba(255,255,255,0.5), rgba(200,200,200,0.5));
+      padding-left: 1.5em;
+      padding-bottom: 1.5em;
 
       h1.main-title {
         margin: 0;
-        margin-bottom: 0.2em;
+        margin-bottom: 0;
         font-family: $mainFontFamily;
         font-size: 2.7em;
         font-weight: 800;
-        color: #4c4c4c;
+        color: #3f3f3f;
         letter-spacing: 0em;
+
+        div {
+          margin: 0;
+          padding: 0;
+        }
+
+        div:nth-child(2) {
+          transform: translateY(-0.15em);
+        }
       }
 
       div.main-subtitle {
@@ -30,7 +45,7 @@ body {
           display: inline-block;
           margin-top: 0;
           font-size: 1.5em;
-          color: #626262;
+          color: #5a5a5a;
 
           div {
             display: block;
@@ -42,8 +57,13 @@ body {
       #main-nav {
         display: inline-block;
         margin: 0;
-        padding-top: 1em;
+        padding: 1em;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
         border-top: 1px solid #c5c5c5;
+        border: 1px solid #c5c5c5;
+        background-color: rgba(220,220,220,0.5);
+        transform: translateX(-1.5em);
 
         ul {
           margin: 0;
@@ -60,9 +80,11 @@ body {
               text-decoration: none;
               font-family: $mainFontFamily;
               color: #565656;
+              letter-spacing: 0.08em;
 
               &:hover {
-                color: #777;
+                color: #888;
+                transition: color 0.2s;
               }
             }
           }

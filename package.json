@@ -1,0 +1,24 @@
+{
+  "name": "vsm22.github.io",
+  "version": "1.0.0",
+  "description": "Vladimir Smirnov's portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vsm22/vsm22.github.io.git"
+  },
+  "author": "Vladimir Smirnov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vsm22/vsm22.github.io/issues"
+  },
+  "homepage": "https://github.com/vsm22/vsm22.github.io#readme",
+  "devDependencies": {
+    "angular": "^1.5.8",
+    "babel": "^6.5.2",
+    "webpack": "^1.13.2"
+  }
+}
