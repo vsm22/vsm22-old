@@ -216,7 +216,6 @@ body {
         color: #14a;
 
         &:hover {
-          text-decoration: underline;
           color: #9ab;
           transition: color 0.2s;
         }
@@ -250,6 +249,50 @@ body {
         &:hover {
           color: #666;
         }
+      }
+    }
+  }
+}
+
+#resume {
+  h1 {
+    margin: 0;
+    padding: 1.5em;
+    color: #333;
+  }
+
+  #resume-list {
+    list-style: none;
+    color: #333;
+    font-weight: 800;
+
+    .resume-section {
+      ul {
+        list-style: none;
+        margin-top: 1em;
+        padding-left: 1em;
+
+        li {
+          margin-top: 1em;
+          margin-bottom: 0em;
+        }
+      }
+    }
+
+    .resume-subsection {
+      display: block;
+      margin-top: 0em;
+      padding-left: 0em;
+      color: #333;
+      font-weight: 800;
+
+      & li {
+        display: inline-block;
+        margin-top: 0.5em;
+        padding-left: 0;
+        margin-right: 0.5em;
+        color: #454545;
+        font-weight: 400;
       }
     }
   }
