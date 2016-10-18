@@ -61,8 +61,7 @@ class Tesseract {
     let ctx = this._ctx;
     let v = this._generateVertices();
 
-    ctx.beginPath();
-    ctx.fillStyle = this.color;
+    ctx.fillStyle = 'green';
 
     ctx.arc(v[0][0], v[0][1], 3, 0, 2*Math.PI);
     ctx.arc(v[1][0], v[1][1], 3, 0, 2*Math.PI);
@@ -81,7 +80,7 @@ class Tesseract {
     ctx.arc(v[14][0], v[14][1], 3, 0, 2*Math.PI);
     ctx.arc(v[15][0], v[15][1], 3, 0, 2*Math.PI);
 
-    ctx.fill();
+    ctx.stroke();
 
     ctx.beginPath();
 
@@ -205,7 +204,7 @@ function animateTesseracts (nowTime) {
   ctx.clearRect(0,0,canvas.width,canvas.height);
 
   for (let i = 0; i < tesseracts.length; i++) {
-    let basicColor =  255 - Math.floor(Math.sin(Math.PI * (tesseracts[i].age / tesseracts[i].lifeLength))*90);
+    let basicColor =  255 - Math.floor(Math.sin(Math.PI * (tesseracts[i].age / tesseracts[i].lifeLength)) * 100);
 
     tesseracts[i].age = tesseracts[i].age + 1;
     tesseracts[i].color = 'rgb(' + basicColor + ',' + basicColor + ',' + basicColor + ')';
@@ -227,4 +226,5 @@ function animateTesseracts (nowTime) {
 
 createTesseracts(40);
 animateTesseracts();
+
 }());

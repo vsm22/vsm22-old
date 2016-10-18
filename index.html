@@ -6,37 +6,202 @@
 </head>
 <body>
   <div id='main-wrap'>
+
     <div id='main-header'>
-      <canvas id='backgroundCanvas'></canvas>
-      <h1 class='main-title'>
+
+      <h1 id='main-title'>
         <div> vladimir </div>
         <div> smirnov </div>
       </h1>
-      <div class='main-subtitle'>
+      <div id='main-description'>
         <h2>
           <div> software & web developer </div>
           <div> audio designer & engineer </div>
         </h2>
       </div>
 
+      <nav id='sticky-nav'>
+        <div id='sticky-title'> Vladimir Smirnov </div>
+      </nav>
+
       <nav id='main-nav'>
         <ul>
           <li>
-            <a href=''> portfolio </a>
+            <a href='#projects'> projects </a>
           </li>
           <li>
-            <a href=''> resume </a>
+            <a href='#resume'> resume </a>
           </li>
           <li>
-            <a href=''> links </a>
+            <a href='#links'> links </a>
           </li>
           <li>
-            <a href=''> contact </a>
+            <a href='#contact'> contact </a>
           </li>
         <ul>
       </nav>
     </div>
+
+    <!-- canvas animation -->
+    <div id='front-page-canvas-container'>
+      <canvas id='backgroundCanvas'></canvas>
+    </div>
+
+    <!-- Projects -->
+    <div id='projects'>
+      <h1> Projects </h1>
+
+      <div class='project' id='additor'>
+        <div class='project-header'>
+          <h1> Additor </h1>
+          <h2> a synth based on the Web Audio API </h2>
+        </div>
+
+        <div class='project-image'>
+          <a href='https://vsm22.github.io/additor' target='_blank'><img src='./images/additor1_cropped.png'></img></a>
+        </div>
+
+        <nav class='project-links'>
+          <a href='https://vsm22.github.io/additor' target='_blank'> Live Version </a>
+          <a href='https://github.com/vsm22/additor' target='_blank'> Source Code </a>
+        </nav>
+
+        <ul class='project-keywords'>
+          <li> JavaScript </li>
+          <li> Web Audio API </li>
+          <li> Canvas </li>
+        </ul>
+
+        <p class='project-description'>
+          Additor is a browser-based <a href='https://en.wikipedia.org/wiki/Additive_synthesis' target='_blank'>additive synthesizer</a> app.
+          I built this app from scratch with vanilla JavaScript.
+          I built a library of audio components based on the Web Audio API, and UI widgets based on the HTML5 canvas.
+          The synthesis component is split up into Attack and release envelopes are specified as 2d arrays
+        </p>
+      </div>
+
+      <div class='project' id='weathervane'>
+        <div class='project-header'>
+          <h1> Weathervane </h1>
+          <h2> weather forecast app based on the Apixu API </h2>
+        </div>
+
+        <div class='project-image'>
+          <a href='https://vsm22.github.io/weathervane' target='_blank'><img src='./images/weathervane1.png'></img></a>
+        </div>
+
+        <nav class='project-links'>
+          <a href='https://vsm22.github.io/weathervane'> Live Version </a>
+          <a href='https://github.com/vsm22/weathervane'> Source Code </a>
+        </nav>
+
+        <ul class='project-keywords'>
+          <li> Angular JS </li>
+          <li> Google Maps API </li>
+          <li> Apixu Weather API </li>
+        </ul>
+
+        <p class='project-description'>
+          Weathervane is a simple weather forecast app.
+          The app lets the user specify the location in a variety of formats, and geocodes the input using the <a href='https://developers.google.com/maps/' target='_blank'>Google Maps API</a>.
+          The received latitude and longtitude coordinates are then sent to the <a href='http://www.apixu.com/'>Apixu Weather API</a> to retrieve the forecast.
+          The app was structured using Angular JS.
+          A <a href='http://codepen.io/vladvladvlad/pen/wzGYaV' target='_blank'>generative background animation</a> was created using the HTML canvas.
+        </p>
+      </div>
+
+      <div class='project' id='jslivewidget'>
+        <div class='project-header'>
+          <h1> JSLiveWidgets </h1>
+          <h2> a mini-library of canvas-based widgets </h2>
+        </div>
+
+        <div class='project-image'>
+          <a href='' target='_blank'><img src=''></img></a>
+        </div>
+
+        <nav class='project-links'>
+          <a href=''> Source Code </a>
+          <a href=''> Documentation </a>
+        </nav>
+
+        <ul class='project-keywords'>
+          <li> JavaScript </li>
+          <li> Canvas </li>
+        </ul>
+
+        <p class='project-description'>
+          JSLiveWidgets is a growing mini-library of canvas-based widgets for browser-based audio applications.
+          The library was loosely inspired by and modeled on the look of <a href='https://www.ableton.com' target='_blank'>Ableton Live</a> and <a href='https://www.ableton.com/en/live/max-for-live/' target='_blank'>Max for Live</a> UI components.
+          I have been using <a href='https://cycling74.com/' target='_blank'> Max </a> to prototype a variety of multimedia tools for a long time, and have grown accustomed to having these UI components available.
+          I thought it would be useful to have a similar set of components that are basic, customizable, and pluggable, implemented in JS for use in browser-based audio applications (and potentially in other environments as well via the <a href='https://webkitgtk.org/' target='_blank'> WebKitGtk</a>, for example).
+          The project is a work-in-progress, but currently the library has the following components: keyboard, dial, slider, volume meter, envelope graph, histogram, drop-down menu, draggable number box.
+        </p>
+      </div>
+    </div>
+  </div>
+
+    <!-- Resume -->
+    <div id='resume'>
+      <h1> Resume </h1>
+
+      <ul id='resume-list'>
+        <li> Skills
+          <ul id='resume-list-skills'>
+            <li> Web Technologies
+              <ul>
+                <li> JavaScript </li>
+                <li> HTML </li>
+                <li> CSS </li>
+                <li> Angular </li>
+                <li> jQuery </li>
+              </ul>
+            </li>
+            <li> Multimedia Design Tools
+              <ul>
+                <li> Max </li>
+                <li> Logic </li>
+                <li> Final Cut </li>
+                <li> Photoshop </li>
+                <li> Sibelius </li>
+              </ul>
+            </li>
+          </ul>
+        <li> Education
+          <ul id='education'>
+            <li> 2016 PhD, Duke University (Music Composition, adviser Stephen Jaffe) </li>
+            <li> 2010 MM, Peabody Conservatory at Johns Hopkins University (Music Composition) </li>
+            <li> 2008 BA, Virginia Tech (Music Theory, minor in Mathematics) </li>
+          </ul>
+        </li>
+    </ul>
+  </div>
+
+    <!-- Links -->
+    <div id='links'>
+      <h1> Links </h1>
+      <ul>
+        <li>
+          <a href='https://github.com/vsm22'> Github (@vsm22) </a>
+        </li>
+        <li>
+          <a href='https://www.linkedin.com/in/vladimir-smirnov-463b6123'> LinkedIn </a>
+        </li>
+        <li>
+          <a href='http://codepen.io/vladvladvlad/'> Codepen (@vladvladvlad) </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div id='contact'>
+      <h1> Contact </h1>
+      <h2> email: vssmirnov@gmail.com </h2>
+      <h2> phone: 703 462 0046 </h2>
+    </div>
   </div>
   <script src='./src/animations/tesseracts.js'></script>
+  <script src='./src/main-ctrl.js'></scrip>
+
 </body>
 </html>
