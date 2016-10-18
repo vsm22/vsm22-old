@@ -70,13 +70,15 @@
           <li> JavaScript </li>
           <li> Web Audio API </li>
           <li> Canvas </li>
+          <li> RequireJS </li>
         </ul>
 
         <p class='project-description'>
           Additor is a browser-based <a href='https://en.wikipedia.org/wiki/Additive_synthesis' target='_blank'>additive synthesizer</a> app.
           I built this app from scratch with vanilla JavaScript.
           I built a library of audio components based on the Web Audio API, and UI widgets based on the HTML5 canvas.
-          The synthesis component is split up into Attack and release envelopes are specified as 2d arrays
+          The synthesis component is split up into Attack and release envelopes are specified as 2d arrays.
+          Module bundling is done with <a href='http://requirejs.org/' target='_blank'> RequireJS</a>.
         </p>
       </div>
 
@@ -117,7 +119,7 @@
         </div>
 
         <div class='project-image'>
-          <a href='' target='_blank'><img src=''></img></a>
+          <a href='' target='_blank'><img src='./images/JSLiveWidgets.png'></img></a>
         </div>
 
         <nav class='project-links'>
@@ -131,11 +133,37 @@
         </ul>
 
         <p class='project-description'>
-          JSLiveWidgets is a growing mini-library of canvas-based widgets for browser-based audio applications.
+          JSLiveWidgets is a mini-library of canvas-based widgets for browser-based audio applications.
           The library was loosely inspired by and modeled on the look of <a href='https://www.ableton.com' target='_blank'>Ableton Live</a> and <a href='https://www.ableton.com/en/live/max-for-live/' target='_blank'>Max for Live</a> UI components.
-          I have been using <a href='https://cycling74.com/' target='_blank'> Max </a> to prototype a variety of multimedia tools for a long time, and have grown accustomed to having these UI components available.
-          I thought it would be useful to have a similar set of components that are basic, customizable, and pluggable, implemented in JS for use in browser-based audio applications (and potentially in other environments as well via the <a href='https://webkitgtk.org/' target='_blank'> WebKitGtk</a>, for example).
+          I have been using <a href='https://cycling74.com/' target='_blank'> Max </a> extensively to prototype multimedia tools in previous projects, and have grown accustomed to having these UI components available.
+          I thought it would be useful to have a similar set of components that are basic, customizable, and pluggable, implemented in JS for use in browser-based audio applications (and potentially in other environments as well via <a href='https://webkitgtk.org/' target='_blank'> WebKitGtk</a>).
           The project is a work-in-progress, but currently the library has the following components: keyboard, dial, slider, volume meter, envelope graph, histogram, drop-down menu, draggable number box.
+          The library is implemented as class modules that have support for AMD and CommonJS, or can be used as globals.
+          UI interaction is supported for mouse as well as touch events.
+        </p>
+      </div>
+
+      <div class='project' id='canvas-animations'>
+        <div class='project-header'>
+          <h1> Canvas Animations </h1>
+          <h2> a bunch of canvas-based animations </h2>
+        </div>
+
+        <div class='project-image'>
+          <a href='' target='_blank'><img src='./images/JSLiveWidgets.png'></img></a>
+        </div>
+
+        <nav class='project-links'>
+          <a href=''> CodePen </a>
+        </nav>
+
+        <ul class='project-keywords'>
+          <li> JavaScript </li>
+          <li> Canvas </li>
+        </ul>
+
+        <p class='project-description'>
+          Sometimes I like to entertain myself by making canvas animations and interactive graphics.
         </p>
       </div>
     </div>
