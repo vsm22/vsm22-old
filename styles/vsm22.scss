@@ -10,25 +10,52 @@ body {
 
 h1 {
   margin: 0;
-  margin-top: 2em;
-  margin-bottom: 2em;
   padding: 0;
-  color: #333;
+  color: hsl(0, 0, 20%);
 }
 
-#front-page-canvas-wrap {
-  position:absolute;
-  z-index: -1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  min-height: 700px;
-  margin-top: 1em;
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.9em;
+  font-weight: 800;
+  color: hsl(0, 0, 20%);
+  letter-spacing: 0em;
+}
 
-  #canvas-animation {
-    position: relative;
+h3 {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  font-size: 1.5em;
+  color: hsl(0, 0, 25%);
+}
+
+a {
+  margin-right: 1em;
+  text-decoration: none;
+  font-family: $mainFontFamily;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  color: #14a;
+
+  &:hover {
+    color: #9ab;
+    transition: color 0.2s;
   }
 }
+
+.section {
+  margin-top: 5em;
+  border: 1px solid hsl(0,0,80%);
+  padding: 2.5em 1em 2em 1em;
+}
+
+.section-title {
+  display: block;
+  text-align: center;
+}
+
 
 #main-content-wrap {
   position: relative;
@@ -177,14 +204,6 @@ h1 {
   position: relative;
   background-color: rgba(255,255,255,0);
 
-  h1 {
-    margin: 0;
-    padding: 0em;
-    text-align: center;
-    color: #333;
-    font-size: 2.3em;
-  }
-
   .project {
     margin-bottom: 1em;
     border: 0;
@@ -192,28 +211,9 @@ h1 {
     background-color: rgba(255,255,255,0);
     box-shadow: 1px 1px 1px 0px #ccc;
 
-    h3 {
-      font-size: 1em;
-      color: #222;
-    }
-
     .project-header {
       padding: 0;
       margin-bottom: 2em;
-
-      h1 {
-        padding: 0;
-        margin-bottom: 0.5em;
-        text-align: left;
-        font-size: 2em;
-        color: hsl(0, 0, 18%);
-      }
-      h2 {
-        margin-top: 0;
-        letter-spacing: 0.015em;
-        line-height: 1.3em;
-        color: hsl(0, 0, 23%);
-      }
     }
 
     .project-image {
@@ -234,33 +234,18 @@ h1 {
     .project-links {
       margin-top: 3em;
       margin-bottom: 2.5em;
-
-      a {
-        margin-right: 1em;
-        text-decoration: none;
-        font-family: $mainFontFamily;
-        font-size: 1.2em;
-        letter-spacing: 0.05em;
-        color: #14a;
-
-        &:hover {
-          color: #9ab;
-          transition: color 0.2s;
-        }
-      }
     }
 
     .project-keywords {
       padding: 0;
-      margin-bottom: 3em;
-      list-style: decimal;
-      font-size: 0.9em;
-      font-weight: 800;
-      color: #555;
+      margin-bottom: 2.5em;
 
       li {
         display: inline-block;
         margin-right: 1em;
+        font-size: 0.9em;
+        font-weight: 800;
+        color: hsl(0, 0, 20%);
       }
     }
 
@@ -270,8 +255,11 @@ h1 {
       color: #454545;
 
       a {
+        margin: 0;
+        letter-spacing: inherit;
         text-decoration: none;
         color: #454545;
+        font-size: 1em;
         font-weight: 600;
 
         &:hover {
@@ -348,74 +336,71 @@ h1 {
 }
 
 #resume {
+  .section-title {
+    text-align: left;
+  }
+
+  #resume-pdf-version {
+    display: inline-block;
+    float: right;
+  }
+
   #resume-list {
-    list-style: none;
-    color: #333;
+    margin-top: 4em;
+    color: hsl(0,0,20%);
     font-weight: 800;
 
-    .resume-section {
-      ul {
-        list-style: none;
-        margin-top: 1em;
-        padding-left: 1em;
+    ul {
+      list-style: none;
+    }
 
-        li {
-          margin-top: 1em;
-          margin-bottom: 0em;
+    .resume-section {
+      margin-top: 2em;
+      color: hsl(0,0,20%);
+      padding: 0;
+
+      h4 {
+        margin-bottom: 1em;
+      }
+
+      & ul {
+        & li {
+          display: inline-block;
+          margin-right: 1em;
+          margin-bottom: 0.2em;
+          font-weight: 400;
         }
       }
     }
 
     .resume-subsection {
-      display: block;
-      margin-top: 0em;
-      padding-left: 0em;
-      color: #333;
-      font-weight: 800;
+      padding: 0;
 
-      & li {
-        display: inline-block;
-        margin-top: 0;
-        padding-left: 0;
-        margin-right: 0.5em;
-        color: #454545;
-        font-weight: 400;
-      }
     }
   }
+
+
 }
 
 
 
 #links {
+  height: auto;
+  min-height: 500px;
+  padding-right: 10em;
+
+  .section-title {
+    text-align: left;
+  }
+
   ul {
     list-style: none;
-    a {
-      text-decoration: none;
-      color: hsl(220,50%,20%);
-      font-weight: 800;
-      line-height: 3em;
-
-      &:hover {
-        color: hsl(200, 50%, 70%);
-      }
-    }
   }
 }
 
-#contact {
-  div {
-    font-family: $mainFontFamily;
-    font-size: 1.5em;
-    line-height: 2.5em;
-    font-weight: 800;
-    color: hsl(0,0,20%);
-  }
-}
 
 #profile-picture-wrap {
   position: relative;
-  display: inline-block;
   float: right;
   clear: top;
   max-width: 250px;
@@ -425,5 +410,19 @@ h1 {
     width: auto;
     max-width: 100%;
     border-radius: 5%;
+  }
+}
+
+#front-page-canvas-wrap {
+  position:absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 700px;
+  margin-top: 1em;
+
+  #canvas-animation {
+    position: relative;
   }
 }

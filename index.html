@@ -46,13 +46,15 @@
 
   <div id='main-content-wrap'>
     <!-- Projects -->
-    <div id='projects'>
-      <h1> Recent Projects </h1>
+    <div class='section' id='projects'>
+      <div class='section-title'>
+        <h1> Recent Projects </h1>
+      </div>
 
       <div class='project' id='additor'>
         <div class='project-header'>
-          <h1> Additor </h1>
-          <h2> a synth based on the Web Audio API </h2>
+          <h2> Additor </h2>
+          <h3> a synth based on the Web Audio API </h3>
         </div>
 
         <div class='project-image'>
@@ -72,8 +74,7 @@
         </ul>
 
         <p class='project-description'>
-          Additor is a browser-based <a href='https://en.wikipedia.org/wiki/Additive_synthesis' target='_blank'>additive synthesizer</a> app.
-          I built this app from scratch with vanilla JavaScript.
+          Additor is a browser-based <a href='https://en.wikipedia.org/wiki/Additive_synthesis' target='_blank'>additive synthesizer</a> app built from scratch with vanilla JavaScript.
           I built a library of audio components based on the Web Audio API, and UI widgets based on the HTML5 canvas.
           The synthesis component is split up into Attack and release envelopes are specified as 2d arrays.
           Module bundling is done with <a href='http://requirejs.org/' target='_blank'> RequireJS</a>.
@@ -325,82 +326,60 @@
 
 
     <!-- Resume -->
-    <div id='resume'>
-      <h1> Resume </h1>
+    <div id='resume' class='section'>
+      <div class='section-title'>
+        <h1> Resume </h1>
+      </div>
 
-      <a href='' target='_blank'>PDF version</a>
+      <div id='resume-pdf-version'>
+        <a href='' target='_blank'>PDF version</a>
+      </div>
 
-
-      <ul id='resume-list'>
-        <li class='resume-section'> Skills
-          <ul>
-            <li> Web Technologies
-              <ul class='resume-subsection'>
-                <li> JavaScript </li>
-                <li> HTML </li>
-                <li> CSS </li>
-                <li> Angular </li>
-                <li> jQuery </li>
-                <li> SCSS </li>
-              </ul>
-            </li>
-            <li> Multimedia Design Tools
-              <ul class='resume-subsection'>
-                <li> Max </li>
-                <li> Logic </li>
-                <li> Final Cut </li>
-                <li> Photoshop </li>
-                <li> Sibelius </li>
-              </ul>
-            </li>
-            <li> Productivity
-              <ul class='resume-subsection'>
+      <div id='resume-list'>
+        <ul>
+          <li class='resume-section'>
+            <h4> Skills </h4>
+            <ul>
+              <div>
+                  <li> JavaScript </li>
+                  <li> HTML </li>
+                  <li> CSS </li>
+              </div>
+              <div>
+                  <li> Angular </li>
+                  <li> jQuery </li>
+                  <li> SCSS </li>
+              </div>
+              <div>
                 <li> Git </li>
                 <li> npm </li>
-                <li> Final Cut </li>
-                <li> Photoshop </li>
-                <li> Sibelius </li>
-              </ul>
-            </li>
-          </ul>
-        <li class='resume-section'> Education
-          <ul>
-            <li> 2016 PhD, Duke University (Music Composition, adviser Stephen Jaffe) </li>
-            <li> 2010 MM, Peabody Conservatory at Johns Hopkins University (Music Composition) </li>
-            <li> 2008 BA, Virginia Tech (Music Theory, minor in Mathematics) </li>
-          </ul>
-        </li>
-        <li class='resume-section'> Experience
-          <li> Graduate Assistant at Duke
-            <ul class='resume-subsection'>
-              <li> Courses taught:
-                <ul>
-                  <li> Intro to Music Theory </li>
-                  <li> Ear Training </li>
-                </ul>
-              </li>
-              <li> Teaching assistant for courses:
-                <ul>
-                  <li> Electronic Music </li>
-                  <li> Studio Techniques </li>
-                  <li> Beatles </li>
-                  <li> Hip-hop Appreciation </li>
-                  <li> Music Theory I </li>
-                </ul>
-              </li>
+              </div>
+
+              <li> Max </li>
+              <li> Logic </li>
+              <li> Final Cut </li>
+            </ul>
+          <li class='resume-section'>
+            <h4> Education </h4>
+            <ul>
+              <li> 2016 PhD, Duke University (Music Composition) </li>
+              <li> 2010 MM, Peabody Conservatory at Johns Hopkins University (Music Composition) </li>
+              <li> 2008 BA, Virginia Tech (Music Theory, minor in Mathematics) </li>
             </ul>
           </li>
-          <li> Lab Assistant, Slippage Dance Technology Lab (dir. Thomas Defrantz)
-            <ul>
-            </ul>
-          <li>
-        </li>
-    </ul>
+          <li class='resume-section'>
+            <h4> Experience </h4>
+          </li>
+      </ul>
+    </div> <!-- /.resume-list -->
   </div>
 
     <!-- Links -->
-    <div id='links'>
-      <h1> Links </h1>
+    <div class='section' id='links'>
+      <div class='section-title'>
+        <h1> Links </h1>
+      </div>
+
       <div id='profile-picture-wrap'>
         <img src='./images/profile_cut.png' id='profile-picture'></img>
       </div>
@@ -415,11 +394,11 @@
           <a href='http://codepen.io/vladvladvlad/'> Codepen (@vladvladvlad) </a>
         </li>
       </ul>
-    </div>
 
-    <!-- Contact -->
-    <div id='contact'>
-      <h1> Contact </h1>
+      <!-- Contact -->
+      <div class='section-title'>
+        <h1> Contact </h1>
+      </div>
 
       <div> email: <a href='mailto:vssmirnov@gmail.com'>vssmirnov@gmail.com</a> </div>
       <div> phone: 703 462 0046 </div>
