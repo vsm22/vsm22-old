@@ -6,51 +6,48 @@
 
 </head>
 <body>
-  <div id='main-wrap'>
-
-    <div id='main-header'>
-
-      <h1 id='main-title'>
-        <div> vladimir </div>
-        <div> smirnov </div>
-      </h1>
-      <div id='main-description'>
-        <h2>
-          <div> software & web developer </div>
-          <div> audio designer & engineer </div>
-        </h2>
-      </div>
-
-      <nav id='sticky-nav'>
-        <div id='sticky-title'> Vladimir Smirnov </div>
-      </nav>
-
-      <nav id='main-nav'>
-        <ul>
-          <li>
-            <a href='#projects'> projects </a>
-          </li>
-          <li>
-            <a href='#resume'> resume </a>
-          </li>
-          <li>
-            <a href='#links'> links </a>
-          </li>
-          <li>
-            <a href='#contact'> contact </a>
-          </li>
-        <ul>
-      </nav>
+  <div id='main-header'>
+    <h1 id='main-title'>
+      <div> vladimir </div>
+      <div> smirnov </div>
+    </h1>
+    <div id='main-description'>
+      <h2>
+        <div> software & web developer </div>
+        <div> audio designer & engineer </div>
+      </h2>
     </div>
 
-    <!-- canvas animation -->
-    <div id='front-page-canvas-container'>
-      <canvas id='backgroundCanvas'></canvas>
-    </div>
+    <nav id='sticky-nav'>
+      <div id='sticky-title'> Vladimir Smirnov </div>
+    </nav>
 
+    <nav id='main-nav'>
+      <ul>
+        <li>
+          <a href='#projects'> projects </a>
+        </li>
+        <li>
+          <a href='#resume'> resume </a>
+        </li>
+        <li>
+          <a href='#links'> links </a>
+        </li>
+        <li>
+          <a href='#contact'> contact </a>
+        </li>
+      <ul>
+    </nav>
+  </div>
+
+  <div id='front-page-canvas-wrap'>
+    <canvas id='canvas-animation'></canvas>
+  </div>
+
+  <div id='main-content-wrap'>
     <!-- Projects -->
     <div id='projects'>
-      <h1> Projects </h1>
+      <h1> Recent Projects </h1>
 
       <div class='project' id='additor'>
         <div class='project-header'>
@@ -190,22 +187,105 @@
         </ul>
 
         <p class='project-description'>
-          My last project with the Slippage Lab at Duke was to create and run audio for a performance at the 2016 <a href='http://www.moogfest.com/'> moogfest</a>.
+          Music and sound design for a multimedia dance performance at the 2016 <a href='http://www.moogfest.com/'> moogfest</a> with Duke's Slippage Lab at Duke was to create and run audio for a performance.
         </p>
       </div>
 
       <div class='project' id='dissertation'>
         <div class='project-header'>
           <h1> Dissertation </h1>
-          <h2> dissertation for the PhD in music composition from Duke University </h2>
+          <h2> dissertation for the PhD in music composition at Duke U </h2>
         </div>
 
         <div class='project-image'>
-          <img src='./images/dissertation.png'></img>
+          <img src='./images/dissertation_recording_medium.png'></img>
+        </div>
+
+        <p class='project-description'>
+          A disseration portfolio consisting of 3 parts: two large-scale compositions (acoustic and electronic), and a music theory/analysis article.
+          Commitee: Stephen Jaffe (composer, Academy of Arts and Letters member), Scott Lindroth (composer, vice provost for the arts), John Supko (composer, director of graduate studies), and Bill Seaman (multimedia artist).
+        </p>
+
+        <div class='project-description-subsection'>
+          <h3> Part 1: Acoustic composition "Double Rainbow" (10 instruments, ca. 35 mins) </h3>
+
+          <div class='subsection-block'>
+            <div class='col-left'>
+              <p>
+              A composition in four movements with the following instrumentation: flute, clarinet (dbl. bass clarinet), saxophones (alto, tenor), horn, violin, viola, cello, double bass, piano, percussion.
+              Recorded by <a href='http://www.ymusicensemble.com' target='_blank'>yMusic</a> and <a href='http://www.jbjazz.com/' target='_blank'>John Brown</a>, <a href='http://www.ncameronbritt.com/' target='_blank'>Cameron Britt</a>, <b>Blake Ray</b>.
+              </p>
+              <nav class='project-links'>
+                <ul>
+                  <li>
+                    <a href='http://vladimirsmirnov.bandcamp.com/album/double-rainbow' target='_blank'> Audio </a>
+                  </li>
+                  <li>
+                    <a href='./assets/double_rainbow_score.pdf' target='_blank'> Score </a>
+                  </li>
+                </ul>
+              </nav>
+            </div> <!-- /.col-left -->
+
+            <div class='col-right'>
+              <div class='subsection-image-wrap'>
+                <a href='./assets/double_rainbow_score.pdf' target='_blank'><img src='./images/doubleRainbow_small.png'></img></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class='project-description-subsection'>
+          <h3> Part 2: Electronic composition "Appalachiana" (Max, Logic, ca. 35 mins) </h3>
+
+            <div class='subsection-block'>
+            <div class='col-left'>
+              <p>
+              An electronic music composition in four movements based on original instruments developed in <a href='https://www.cycling74.com' target='_blank'> Max. </a>
+              </p>
+              <nav class='project-links'>
+                <ul>
+                  <li>
+                    <a href='http://vladimirsmirnov.bandcamp.com/album/appalachiana' target='_blank'> Audio </a>
+                  </li>
+                  <li>
+                    <a href=''>Code</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class='col-right'>
+              <div class='subsection-image-wrap'>
+                <img src='./images/appalachiana.png'></img>
+              </div>
+            </div>
+          </div> <!-- /.subsection-block -->
+        </div>
+
+        <div class='project-description-subsection'>
+          <h3> Part 3: Music theory article "'The Invisible Mass': Compositional Technique in Alfred Schnittke's 2nd Symphony" </h3>
+          <p>
+          An analytical article focusing on the musical form, harmony, and orchestration in <a href='http://www.universaledition.com/composers-and-works/Alfred-Schnittke/composer/651/work/337' target='_blank'>Alfred Schnittke's Second Symphony (1979)</a>, based on original research, source translation, and musical analysis.
+          </p>
+          <nav class='project-links'>
+            <a href=''> Pdf </a>
+          </nav>
+        </div>
+      </div>
+
+      <div class='project' id='fast-past-dance'>
+        <div class='project-header'>
+          <h1> FastPastDance </h1>
+          <h2> music and sound design for a performance at Detroit Institute of Arts </h2>
+        </div>
+
+        <div class='project-image'>
+          <a href='https://vladimirsmirnov.bandcamp.com/album/fastpastdance' target='_blank'><img src='./images/detroitDance.png'></img></a>
         </div>
 
         <nav class='project-links'>
-          <a href='http://vladimirsmirnov.bandcamp.com/album/ghost-dancing' target='_blank'> Audio </a>
+          <a href='https://vladimirsmirnov.bandcamp.com/album/fastpastdance' target='_blank'> Audio </a>
         </nav>
 
         <ul class='project-keywords'>
@@ -214,7 +294,31 @@
         </ul>
 
         <p class='project-description'>
-          My last project with the Slippage Lab at Duke was to create and run audio for a performance at the 2016 <a href='http://www.moogfest.com/'> moogfest</a>.
+          Music and sound design for a multimedia dance performance at the opening of the <a href='http://www.dia.org/calendar/exhibition.aspx?id=5396&iid='> "Dance! American Art 1830-1960"</a> at the <a href='http://www.dia.org/'>Detroit Institute of Arts</a> with the Slippage lab.
+        </p>
+      </div>
+
+      <div class='project' id='jhf-photobooth'>
+        <div class='project-header'>
+          <h1> John Hope Franklin Photobooth </h1>
+          <h2> code for an interactive installation at the Nasher Museum</h2>
+        </div>
+
+        <div class='project-image'>
+          <img src='./images/jhf.jpg'></img>
+        </div>
+
+        <nav class='project-links'>
+          <a href='https://github.com/vsm22/VideoPhotoBooth-for-John-Hope-Franklin-Centennial' target='_blank'> Code </a>
+        </nav>
+
+        <ul class='project-keywords'>
+          <li> Max </li>
+          <li> JavaScript </li>
+        </ul>
+
+        <p class='project-description'>
+          Code for a multimedia installation at the <a href='http://nasher.duke.edu/'>Nasher Museum</a> for the <a href='https://jhf100.duke.edu/' target='_blank'>John Hope Franklin Centenary</a> celebration.
         </p>
       </div>
     </div> <!-- /#projects -->
@@ -223,6 +327,9 @@
     <!-- Resume -->
     <div id='resume'>
       <h1> Resume </h1>
+
+      <a href='' target='_blank'>PDF version</a>
+
 
       <ul id='resume-list'>
         <li class='resume-section'> Skills
@@ -263,12 +370,40 @@
             <li> 2008 BA, Virginia Tech (Music Theory, minor in Mathematics) </li>
           </ul>
         </li>
+        <li class='resume-section'> Experience
+          <li> Graduate Assistant at Duke
+            <ul class='resume-subsection'>
+              <li> Courses taught:
+                <ul>
+                  <li> Intro to Music Theory </li>
+                  <li> Ear Training </li>
+                </ul>
+              </li>
+              <li> Teaching assistant for courses:
+                <ul>
+                  <li> Electronic Music </li>
+                  <li> Studio Techniques </li>
+                  <li> Beatles </li>
+                  <li> Hip-hop Appreciation </li>
+                  <li> Music Theory I </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li> Lab Assistant, Slippage Dance Technology Lab (dir. Thomas Defrantz)
+            <ul>
+            </ul>
+          <li>
+        </li>
     </ul>
   </div>
 
     <!-- Links -->
     <div id='links'>
       <h1> Links </h1>
+      <div id='profile-picture-wrap'>
+        <img src='./images/profile_cut.png' id='profile-picture'></img>
+      </div>
       <ul>
         <li>
           <a href='https://github.com/vsm22'> Github (@vsm22) </a>
@@ -285,12 +420,13 @@
     <!-- Contact -->
     <div id='contact'>
       <h1> Contact </h1>
-      <h2> email: vssmirnov@gmail.com </h2>
-      <h2> phone: 703 462 0046 </h2>
+
+      <div> email: <a href='mailto:vssmirnov@gmail.com'>vssmirnov@gmail.com</a> </div>
+      <div> phone: 703 462 0046 </div>
     </div>
   </div>
-  </div>
-  <script src='./src/animations/tesseracts.js'></script>
+</body>
+  <script src='./src/animations/tesseracts2.js'></script>
   <script src='./src/main-ctrl.js'></scrip>
 
 </body>
