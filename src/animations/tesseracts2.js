@@ -37,10 +37,10 @@
 
       this.bgGradient = this._ctx.createLinearGradient(0, 0, 0, this._canvas.height);
       this.bgGradient.addColorStop(0, 'rgba(255,255,255, 0.1)');
-      this.bgGradient.addColorStop(0.3, 'rgba(255,255,255, 0.03)');
-      this.bgGradient.addColorStop(0.4, 'rgba(255,255,255, 0.01)');
-      this.bgGradient.addColorStop(0.6, 'rgba(255,255,255, 0.01)');
-      this.bgGradient.addColorStop(0.8, 'rgba(255,255,255, 0.03)');
+      this.bgGradient.addColorStop(0.3, 'rgba(255,255,255, 0.06)');
+      this.bgGradient.addColorStop(0.4, 'rgba(255,255,255, 0.03)');
+      this.bgGradient.addColorStop(0.6, 'rgba(255,255,255, 0.02)');
+      this.bgGradient.addColorStop(0.7, 'rgba(255,255,255, 0.06)');
       this.bgGradient.addColorStop(1, 'rgba(255,255,255, 0.5)');
     }
 

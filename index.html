@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel='stylesheet' type='text/css' href='./styles/vsm22.min.css'>
-  <meta name='viewport' content='width=device-width'>
+
 
 </head>
 <body>
+  <nav id='sticky-nav'>
+    <div id='sticky-title'> Vladimir Smirnov </div>
+    <ul id='sticky-site-nav'>
+      <li>
+        <a id='projects-link-sticky'> projects </a>
+      </li>
+      <li>
+        <a id='resume-link-sticky'> resume </a>
+      </li>
+      <li>
+        <a id='contact-link-sticky'> contact </a>
+      </li>
+      <li>
+        <a id='top-link-sticky'> top </a>
+      </li>
+    </ul>
+    <nav class='external-links'>
+      <ul>
+        <li>
+          <a href=''><img src='./images/github_logo.png'></a>
+        </li>
+        <li>
+          <a href=''><img src='./images/codepen_logo.png'></a>
+        </li>
+        <li>
+          <a href=''><img src='./images/linkedin_logo.png'></a>
+        </li>
+    </nav>
+  </nav>
+
   <div id='main-header'>
     <h1 id='main-title'>
       <div> vladimir </div>
@@ -18,25 +49,31 @@
       </h2>
     </div>
 
-    <nav id='sticky-nav'>
-      <div id='sticky-title'> Vladimir Smirnov </div>
-    </nav>
-
     <nav id='main-nav'>
       <ul>
         <li>
-          <a href='#projects'> projects </a>
+          <a id='projects-link'> projects </a>
         </li>
         <li>
-          <a href='#resume'> resume </a>
+          <a id='resume-link'> resume </a>
         </li>
         <li>
-          <a href='#links'> links </a>
+          <a id='contact-link'> contact </a>
         </li>
-        <li>
-          <a href='#contact'> contact </a>
-        </li>
+      </ul>
+    </nav>
+
+    <nav class='external-links'>
       <ul>
+        <li>
+          <a href=''><img src='./images/github_logo.png'></a>
+        </li>
+        <li>
+          <a href=''><img src='./images/codepen_logo.png'></a>
+        </li>
+        <li>
+          <a href=''><img class='linkedin' src='./images/linkedin_logo.png'></a>
+        </li>
     </nav>
   </div>
 
@@ -61,266 +98,281 @@
           <a href='https://vsm22.github.io/additor' target='_blank'><img src='./images/additor1_cropped.png'></img></a>
         </div>
 
-        <nav class='project-links'>
-          <a href='https://vsm22.github.io/additor' target='_blank'> Live Version </a>
-          <a href='https://github.com/vsm22/additor' target='_blank'> Source Code </a>
-        </nav>
+        <div class='project-content'>
+          <nav class='project-links'>
+            <a href='https://vsm22.github.io/additor' target='_blank'> Live Version </a>
+            <a href='https://github.com/vsm22/additor' target='_blank'> Source Code </a>
+          </nav>
 
-        <ul class='project-keywords'>
-          <li> JavaScript </li>
-          <li> Web Audio API </li>
-          <li> Canvas </li>
-          <li> RequireJS </li>
-        </ul>
+          <ul class='project-keywords'>
+            <li> JavaScript </li>
+            <li> Web Audio API </li>
+            <li> Canvas </li>
+            <li> RequireJS </li>
+          </ul>
 
-        <p class='project-description'>
-          Additor is a browser-based <a href='https://en.wikipedia.org/wiki/Additive_synthesis' target='_blank'>additive synthesizer</a> app built from scratch with vanilla JavaScript.
-          I built a library of audio components based on the Web Audio API, and UI widgets based on the HTML5 canvas.
-          The synthesis component is split up into Attack and release envelopes are specified as 2d arrays.
-          Module bundling is done with <a href='http://requirejs.org/' target='_blank'> RequireJS</a>.
-        </p>
+          <p class='project-description'>
+            Additor is a browser-based <a href='https://en.wikipedia.org/wiki/Additive_synthesis' target='_blank'>additive synthesizer</a> app built from scratch with vanilla JavaScript.
+            I built a library of audio components based on the Web Audio API, and UI widgets based on the HTML5 canvas.
+            The synthesis component is split up into Attack and release envelopes are specified as 2d arrays.
+            Module bundling is done with <a href='http://requirejs.org/' target='_blank'> RequireJS</a>.
+          </p>
+        </div>
       </div>
 
       <div class='project' id='weathervane'>
         <div class='project-header'>
-          <h1> Weathervane </h1>
-          <h2> weather forecast app based on the Apixu API </h2>
+          <h2> Weathervane </h2>
+          <h3> weather forecast app based on the Apixu API </h3>
         </div>
 
         <div class='project-image'>
           <a href='https://vsm22.github.io/weathervane' target='_blank'><img src='./images/weathervane1.png'></img></a>
         </div>
 
-        <nav class='project-links'>
-          <a href='https://vsm22.github.io/weathervane'> Live Version </a>
-          <a href='https://github.com/vsm22/weathervane'> Source Code </a>
-        </nav>
+        <div class='project-content'>
+          <nav class='project-links'>
+            <a href='https://vsm22.github.io/weathervane'> Live Version </a>
+            <a href='https://github.com/vsm22/weathervane'> Source Code </a>
+          </nav>
 
-        <ul class='project-keywords'>
-          <li> Angular JS </li>
-          <li> Google Maps API </li>
-          <li> Apixu Weather API </li>
-        </ul>
+          <ul class='project-keywords'>
+            <li> Angular JS </li>
+            <li> Google Maps API </li>
+            <li> Apixu Weather API </li>
+          </ul>
 
-        <p class='project-description'>
-          Weathervane is a simple weather forecast app.
-          The app lets the user specify the location in a variety of formats, and geocodes the input using the <a href='https://developers.google.com/maps/' target='_blank'>Google Maps API</a>.
-          The received latitude and longtitude coordinates are then sent to the <a href='http://www.apixu.com/'>Apixu Weather API</a> to retrieve the forecast.
-          The app was structured using Angular JS.
-          A <a href='http://codepen.io/vladvladvlad/pen/wzGYaV' target='_blank'>generative background animation</a> was created using the HTML canvas.
-        </p>
+          <p class='project-description'>
+            Weathervane is a simple weather forecast app.
+            The app lets the user specify the location in a variety of formats, and geocodes the input using the <a href='https://developers.google.com/maps/' target='_blank'>Google Maps API</a>.
+            The received latitude and longtitude coordinates are then sent to the <a href='http://www.apixu.com/'>Apixu Weather API</a> to retrieve the forecast.
+            The app was structured using Angular JS.
+            A <a href='http://codepen.io/vladvladvlad/pen/wzGYaV' target='_blank'>generative background animation</a> was created using the HTML canvas.
+          </p>
+        </div>
       </div>
 
       <div class='project' id='jslivewidget'>
         <div class='project-header'>
-          <h1> JSLiveWidgets </h1>
-          <h2> a mini-library of canvas-based widgets </h2>
+          <h2> JSLiveWidgets </h2>
+          <h3> a mini-library of canvas-based widgets </h3>
         </div>
 
         <div class='project-image'>
           <a href='' target='_blank'><img src='./images/JSLiveWidgets.png'></img></a>
         </div>
 
-        <nav class='project-links'>
-          <a href=''> Source Code </a>
-          <a href=''> Documentation </a>
-        </nav>
+        <div class='project-content'>
+          <nav class='project-links'>
+            <a href=''> Source Code </a>
+            <a href=''> Documentation </a>
+          </nav>
 
-        <ul class='project-keywords'>
-          <li> JavaScript </li>
-          <li> Canvas </li>
-        </ul>
+          <ul class='project-keywords'>
+            <li> JavaScript </li>
+            <li> Canvas </li>
+          </ul>
 
-        <p class='project-description'>
-          JSLiveWidgets is a mini-library of canvas-based widgets for browser-based audio applications.
-          The library was loosely inspired by and modeled on the look of <a href='https://www.ableton.com' target='_blank'>Ableton Live</a> and <a href='https://www.ableton.com/en/live/max-for-live/' target='_blank'>Max for Live</a> UI components.
-          I have been using <a href='https://cycling74.com/' target='_blank'> Max </a> extensively to prototype multimedia tools in previous projects, and have grown accustomed to having these UI components available.
-          I thought it would be useful to have a similar set of components that are basic, customizable, and pluggable, implemented in JS for use in browser-based audio applications (and potentially in other environments as well via <a href='https://webkitgtk.org/' target='_blank'> WebKitGtk</a>).
-          The project is a work-in-progress, but currently the library has the following components: keyboard, dial, slider, volume meter, envelope graph, histogram, drop-down menu, draggable number box.
-          The library is implemented as class modules that have support for AMD and CommonJS, or can be used as globals.
-          UI interaction is supported for mouse as well as touch events.
-        </p>
+          <p class='project-description'>
+            JSLiveWidgets is a mini-library of canvas-based widgets for browser-based audio applications.
+            The library was loosely inspired by and modeled on the look of <a href='https://www.ableton.com' target='_blank'>Ableton Live</a> and <a href='https://www.ableton.com/en/live/max-for-live/' target='_blank'>Max for Live</a> UI components.
+            I have been using <a href='https://cycling74.com/' target='_blank'> Max </a> extensively to prototype multimedia tools in previous projects, and have grown accustomed to having these UI components available.
+            I thought it would be useful to have a similar set of components that are basic, customizable, and pluggable, implemented in JS for use in browser-based audio applications (and potentially in other environments as well via <a href='https://webkitgtk.org/' target='_blank'> WebKitGtk</a>).
+            The project is a work-in-progress, but currently the library has the following components: keyboard, dial, slider, volume meter, envelope graph, histogram, drop-down menu, draggable number box.
+            The library is implemented as class modules that have support for AMD and CommonJS, or can be used as globals.
+            UI interaction is supported for mouse as well as touch events.
+          </p>
+        </div>
       </div>
 
       <div class='project' id='canvas-animations'>
         <div class='project-header'>
-          <h1> Canvas Animations </h1>
-          <h2> a bunch of canvas-based animations </h2>
+          <h2> Canvas Animations </h2>
+          <h3> a bunch of canvas-based animations </h3>
         </div>
 
         <div class='project-image'>
           <img src='./images/canvasAnimations.png'></img>
         </div>
 
-        <nav class='project-links'>
-          <a href='http://codepen.io/collection/XOEYOr/' target='_blank'> CodePen </a>
-        </nav>
+        <div class='project-content'>
+          <nav class='project-links'>
+            <a href='http://codepen.io/collection/XOEYOr/' target='_blank'> CodePen </a>
+          </nav>
 
-        <ul class='project-keywords'>
-          <li> JavaScript </li>
-          <li> Canvas </li>
-        </ul>
+          <ul class='project-keywords'>
+            <li> JavaScript </li>
+            <li> Canvas </li>
+          </ul>
 
-        <p class='project-description'>
-          Sometimes I like to entertain myself by making litte canvas doodles.
-          Some of these are delibirate, and some are happy (or unhappy) accidents.
-          May or may not cause seizures.
-        </p>
+          <p class='project-description'>
+            Sometimes I like to entertain myself by making litte canvas doodles.
+            Some of these are delibirate, and some are happy (or unhappy) accidents.
+            May or may not cause seizures.
+          </p>
+        </div>
       </div>
 
       <div class='project' id='ghost-dancing'>
         <div class='project-header'>
-          <h1> Ghost Dancing </h1>
-          <h2> music and sound design for a performance at 2016 Moogfest </h2>
+          <h2> Ghost Dancing </h2>
+          <h3> music and sound design for a performance at 2016 moogfest </h3>
         </div>
 
         <div class='project-image'>
           <img src='./images/ghostDancing.png'></img>
         </div>
 
-        <nav class='project-links'>
-          <a href='http://vladimirsmirnov.bandcamp.com/album/ghost-dancing' target='_blank'> Audio </a>
-        </nav>
+        <div class='project-content'>
+          <nav class='project-links'>
+            <a href='http://vladimirsmirnov.bandcamp.com/album/ghost-dancing' target='_blank'> Audio </a>
+          </nav>
 
-        <ul class='project-keywords'>
-          <li> Max </li>
-          <li> Logic </li>
-        </ul>
+          <ul class='project-keywords'>
+            <li> Max </li>
+            <li> Logic </li>
+          </ul>
 
-        <p class='project-description'>
-          Music and sound design for a multimedia dance performance at the 2016 <a href='http://www.moogfest.com/'> moogfest</a> with Duke's Slippage Lab at Duke was to create and run audio for a performance.
-        </p>
+          <p class='project-description'>
+            Music and sound design for a multimedia dance performance at the 2016 <a href='http://www.moogfest.com/'> moogfest</a> with Duke's Slippage Lab at Duke was to create and run audio for a performance.
+          </p>
+        </div>
       </div>
 
       <div class='project' id='dissertation'>
         <div class='project-header'>
-          <h1> Dissertation </h1>
-          <h2> dissertation for the PhD in music composition at Duke U </h2>
+          <h2> Dissertation </h2>
+          <h3> dissertation for the PhD in music composition at Duke U </h3>
         </div>
 
         <div class='project-image'>
           <img src='./images/dissertation_recording_medium.png'></img>
         </div>
 
-        <p class='project-description'>
-          A disseration portfolio consisting of 3 parts: two large-scale compositions (acoustic and electronic), and a music theory/analysis article.
-          Commitee: Stephen Jaffe (composer, Academy of Arts and Letters member), Scott Lindroth (composer, vice provost for the arts), John Supko (composer, director of graduate studies), and Bill Seaman (multimedia artist).
-        </p>
+        <div class='project-content'>
+          <p class='project-description'>
+            A disseration portfolio consisting of 3 parts: two large-scale compositions (acoustic and electronic), and a music theory/analysis article.
+            Commitee: <a href='https://en.wikipedia.org/wiki/Stephen_Jaffe' target='_blank'> Stephen Jaffe</a> (composer, American Academy of Arts and Letters), <a href='http://people.duke.edu/~scott1/' target='_blank'>Scott Lindroth</a> (composer, Duke Vice Provost for the Arts), <a href='http://www.johnsupko.com/' target='_blank'>John Supko</a> (composer, Duke Director of Graduate Studies in music), and <a href='http://billseaman.com/' target='_blank'>Bill Seaman</a> (multimedia artist).
+          </p>
 
-        <div class='project-description-subsection'>
-          <h3> Part 1: Acoustic composition "Double Rainbow" (10 instruments, ca. 35 mins) </h3>
+          <div class='project-description-subsection'>
+            <h4> Part 1: Acoustic composition "Double Rainbow" (10 instruments, ca. 35 mins) </h4>
 
-          <div class='subsection-block'>
-            <div class='col-left'>
-              <p>
-              A composition in four movements with the following instrumentation: flute, clarinet (dbl. bass clarinet), saxophones (alto, tenor), horn, violin, viola, cello, double bass, piano, percussion.
-              Recorded by <a href='http://www.ymusicensemble.com' target='_blank'>yMusic</a> and <a href='http://www.jbjazz.com/' target='_blank'>John Brown</a>, <a href='http://www.ncameronbritt.com/' target='_blank'>Cameron Britt</a>, <b>Blake Ray</b>.
-              </p>
-              <nav class='project-links'>
-                <ul>
-                  <li>
-                    <a href='http://vladimirsmirnov.bandcamp.com/album/double-rainbow' target='_blank'> Audio </a>
-                  </li>
-                  <li>
-                    <a href='./assets/double_rainbow_score.pdf' target='_blank'> Score </a>
-                  </li>
-                </ul>
-              </nav>
-            </div> <!-- /.col-left -->
+            <div class='subsection-block'>
+              <div class='col-left'>
+                <p>
+                A composition in four movements with the following instrumentation: flute, clarinet (dbl. bass clarinet), saxophones (alto, tenor), horn, violin, viola, cello, double bass, piano, percussion.
+                Recorded by <a href='http://www.ymusicensemble.com' target='_blank'>yMusic</a> and <a href='http://www.jbjazz.com/' target='_blank'>John Brown</a>, <a href='http://www.ncameronbritt.com/' target='_blank'>Cameron Britt</a>, <b>Blake Ray</b>.
+                </p>
+                <nav class='project-links'>
+                  <ul>
+                    <li>
+                      <a href='http://vladimirsmirnov.bandcamp.com/album/double-rainbow' target='_blank'> Audio </a>
+                    </li>
+                    <li>
+                      <a href='./assets/double_rainbow_score.pdf' target='_blank'> Score </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div> <!-- /.col-left -->
 
-            <div class='col-right'>
-              <div class='subsection-image-wrap'>
-                <a href='./assets/double_rainbow_score.pdf' target='_blank'><img src='./images/doubleRainbow_small.png'></img></a>
+              <div class='col-right'>
+                <div class='subsection-image-wrap'>
+                  <a href='./assets/double_rainbow_score.pdf' target='_blank'><img src='./images/doubleRainbow_small.png'></img></a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class='project-description-subsection'>
-          <h3> Part 2: Electronic composition "Appalachiana" (Max, Logic, ca. 35 mins) </h3>
+          <div class='project-description-subsection'>
+            <h4> Part 2: Electronic composition "Appalachiana" (Max, Logic, ca. 35 mins) </h4>
 
-            <div class='subsection-block'>
-            <div class='col-left'>
-              <p>
-              An electronic music composition in four movements based on original instruments developed in <a href='https://www.cycling74.com' target='_blank'> Max. </a>
-              </p>
-              <nav class='project-links'>
-                <ul>
-                  <li>
-                    <a href='http://vladimirsmirnov.bandcamp.com/album/appalachiana' target='_blank'> Audio </a>
-                  </li>
-                  <li>
-                    <a href=''>Code</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-
-            <div class='col-right'>
-              <div class='subsection-image-wrap'>
-                <img src='./images/appalachiana.png'></img>
+              <div class='subsection-block'>
+              <div class='col-left'>
+                <p>
+                An electronic music composition in four movements based on original instruments developed in <a href='https://www.cycling74.com' target='_blank'> Max. </a>
+                </p>
+                <nav class='project-links'>
+                  <ul>
+                    <li>
+                      <a href='http://vladimirsmirnov.bandcamp.com/album/appalachiana' target='_blank'> Audio </a>
+                    </li>
+                    <li>
+                      <a href=''>Code</a>
+                    </li>
+                  </ul>
+                </nav>
               </div>
-            </div>
-          </div> <!-- /.subsection-block -->
-        </div>
 
-        <div class='project-description-subsection'>
-          <h3> Part 3: Music theory article "'The Invisible Mass': Compositional Technique in Alfred Schnittke's 2nd Symphony" </h3>
-          <p>
-          An analytical article focusing on the musical form, harmony, and orchestration in <a href='http://www.universaledition.com/composers-and-works/Alfred-Schnittke/composer/651/work/337' target='_blank'>Alfred Schnittke's Second Symphony (1979)</a>, based on original research, source translation, and musical analysis.
-          </p>
-          <nav class='project-links'>
-            <a href=''> Pdf </a>
-          </nav>
-        </div>
+              <div class='col-right'>
+                <div class='subsection-image-wrap'>
+                  <img src='./images/appalachiana.png'></img>
+                </div>
+              </div>
+            </div> <!-- /.subsection-block -->
+          </div>
+
+          <div class='project-description-subsection'>
+            <h4> Part 3: Music theory article "'The Invisible Mass': Compositional Technique in Alfred Schnittke's 2nd Symphony" </h4>
+            <p>
+            An analytical article focusing on the musical form, harmony, and orchestration in <a href='http://www.universaledition.com/composers-and-works/Alfred-Schnittke/composer/651/work/337' target='_blank'>Alfred Schnittke's Second Symphony (1979)</a>, based on original research, source translation, and musical analysis.
+            </p>
+            <nav class='project-links'>
+              <a href=''> Pdf </a>
+            </nav>
+          </div>
       </div>
 
       <div class='project' id='fast-past-dance'>
         <div class='project-header'>
-          <h1> FastPastDance </h1>
-          <h2> music and sound design for a performance at Detroit Institute of Arts </h2>
+          <h2> FastPastDance </h2>
+          <h3> music and sound design for a performance at Detroit Institute of Arts </h3>
         </div>
 
         <div class='project-image'>
           <a href='https://vladimirsmirnov.bandcamp.com/album/fastpastdance' target='_blank'><img src='./images/detroitDance.png'></img></a>
         </div>
 
-        <nav class='project-links'>
-          <a href='https://vladimirsmirnov.bandcamp.com/album/fastpastdance' target='_blank'> Audio </a>
-        </nav>
+        <div class='project-content'>
+          <nav class='project-links'>
+            <a href='https://vladimirsmirnov.bandcamp.com/album/fastpastdance' target='_blank'> Audio </a>
+          </nav>
 
-        <ul class='project-keywords'>
-          <li> Max </li>
-          <li> Logic </li>
-        </ul>
+          <ul class='project-keywords'>
+            <li> Max </li>
+            <li> Logic </li>
+          </ul>
 
-        <p class='project-description'>
-          Music and sound design for a multimedia dance performance at the opening of the <a href='http://www.dia.org/calendar/exhibition.aspx?id=5396&iid='> "Dance! American Art 1830-1960"</a> at the <a href='http://www.dia.org/'>Detroit Institute of Arts</a> with the Slippage lab.
-        </p>
+          <p class='project-description'>
+            Music and sound design for a multimedia dance performance at the opening of the <a href='http://www.dia.org/calendar/exhibition.aspx?id=5396&iid='> "Dance! American Art 1830-1960"</a> at the <a href='http://www.dia.org/'>Detroit Institute of Arts</a> with the Slippage lab.
+          </p>
+        </div>
       </div>
 
       <div class='project' id='jhf-photobooth'>
         <div class='project-header'>
-          <h1> John Hope Franklin Photobooth </h1>
-          <h2> code for an interactive installation at the Nasher Museum</h2>
+          <h2> John Hope Franklin Photobooth </h2>
+          <h3> code for an interactive installation at the Nasher Museum</h3>
         </div>
 
         <div class='project-image'>
           <img src='./images/jhf.jpg'></img>
         </div>
 
-        <nav class='project-links'>
-          <a href='https://github.com/vsm22/VideoPhotoBooth-for-John-Hope-Franklin-Centennial' target='_blank'> Code </a>
-        </nav>
+        <div class='project-content'>
+          <nav class='project-links'>
+            <a href='https://github.com/vsm22/VideoPhotoBooth-for-John-Hope-Franklin-Centennial' target='_blank'> Code </a>
+          </nav>
 
-        <ul class='project-keywords'>
-          <li> Max </li>
-          <li> JavaScript </li>
-        </ul>
+          <ul class='project-keywords'>
+            <li> Max </li>
+            <li> JavaScript </li>
+          </ul>
 
-        <p class='project-description'>
-          Code for a multimedia installation at the <a href='http://nasher.duke.edu/'>Nasher Museum</a> for the <a href='https://jhf100.duke.edu/' target='_blank'>John Hope Franklin Centenary</a> celebration.
-        </p>
+          <p class='project-description'>
+            Code for a multimedia installation at the <a href='http://nasher.duke.edu/'>Nasher Museum</a> for the <a href='https://jhf100.duke.edu/' target='_blank'>John Hope Franklin Centenary</a> celebration.
+          </p>
+        </div>
       </div>
     </div> <!-- /#projects -->
 
@@ -332,14 +384,14 @@
       </div>
 
       <div id='resume-pdf-version'>
-        <a href='' target='_blank'>PDF version</a>
+        <a href='' target='_blank'>pdf version</a>
       </div>
 
       <div id='resume-list'>
         <ul>
           <li class='resume-section'>
             <h4> Skills </h4>
-            <ul>
+            <ul id='skills-list'>
               <div>
                   <li> JavaScript </li>
                   <li> HTML </li>
@@ -352,7 +404,9 @@
               </div>
               <div>
                 <li> Git </li>
-                <li> npm </li>
+                <li> Bower </li>
+                <li> Webpack </li>
+                <li> Babel </li>
               </div>
 
               <li> Max </li>
@@ -361,14 +415,48 @@
             </ul>
           <li class='resume-section'>
             <h4> Education </h4>
-            <ul>
+            <ul id='education-list'>
               <li> 2016 PhD, Duke University (Music Composition) </li>
               <li> 2010 MM, Peabody Conservatory at Johns Hopkins University (Music Composition) </li>
               <li> 2008 BA, Virginia Tech (Music Theory, minor in Mathematics) </li>
+              <li id='additional-coursework'> Additional relevant coursework: Data Structures and Algorithms I & II (2 semesters), Computer Organization and Design, Electric Circuit Design, Sonification, Generative Media
             </ul>
           </li>
           <li class='resume-section'>
             <h4> Experience </h4>
+            <ul id='experience-list'>
+              <li> Lab Assistant, Slippage Performance Technology Lab, 2015-2016 </li>
+              <li> Teaching Assistant, Duke University Department of Music, 2010-2015
+                <ul id='teaching-list'>
+                  <li>
+                    Courses Taught:
+                    <ul>
+                      <li> Intro to Music Theory; </li>
+                      <li> Ear Training Lab; </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Courses Assisted:
+                    <ul>
+                      <li> Electronic Music; </li>
+                      <li> Studio Techniques; </li>
+                      <li> Beatles; </li>
+                      <li> Hip-Hop Appreciation; </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li> Research Assistant, DISIS Music Technology Lab, 2006-2008</li>
+            </ul>
+          </li>
+          <li class='resume-section'>
+            <h4> Academic Awards </h4>
+            <ul>
+              <li> James B Duke Fellowship, 2010-2015 </li>
+              <li> Summer Research Fellowship, 2014 </li>
+              <li> Undergraduate Research Institute Grant, 2007 </li>
+              <li> JB West Scholarship, 2004-2008 </li>
+            </ul>
           </li>
       </ul>
     </div> <!-- /.resume-list -->
@@ -381,22 +469,22 @@
       </div>
 
       <div id='profile-picture-wrap'>
-        <img src='./images/profile_cut.png' id='profile-picture'></img>
+        <img src='./images/profile_cut_lighter.png' id='profile-picture'></img>
       </div>
       <ul>
         <li>
-          <a href='https://github.com/vsm22'> Github (@vsm22) </a>
+          <a href='https://github.com/vsm22'> Github </a>
         </li>
         <li>
           <a href='https://www.linkedin.com/in/vladimir-smirnov-463b6123'> LinkedIn </a>
         </li>
         <li>
-          <a href='http://codepen.io/vladvladvlad/'> Codepen (@vladvladvlad) </a>
+          <a href='http://codepen.io/vladvladvlad/'> Codepen </a>
         </li>
       </ul>
 
       <!-- Contact -->
-      <div class='section-title'>
+      <div class='section-title' id='contact'>
         <h1> Contact </h1>
       </div>
 
@@ -406,7 +494,7 @@
   </div>
 </body>
   <script src='./src/animations/tesseracts2.js'></script>
-  <script src='./src/main-ctrl.js'></scrip>
+  <script src='./src/main-ctrl.js'></script>
 
 </body>
 </html>
