@@ -1,7 +1,5 @@
 (function(){
-
-  var mainTitle = document.getElementById('main-title');
-  var mainDescription = document.getElementById('main-description');
+  'use strict';
 
   var mainNav = document.getElementById('main-nav');
   var stickyNav = document.getElementById('sticky-nav');
@@ -13,6 +11,7 @@
   var contactLink = document.getElementById('contact-link');
   var contactLinkSticky = document.getElementById('contact-link-sticky');
   var topLinkSticky = document.getElementById('top-link-sticky');
+  var topArrowBodySticky = document.getElementById('sticky-return-to-top');
 
   /* Clicking link sliding ---------------------------------------------------*/
   projectsLink.addEventListener('mouseup', slideToProjects);
@@ -22,60 +21,73 @@
   contactLink.addEventListener('mouseup', slideToContact);
   contactLinkSticky.addEventListener('mouseup', slideToContact);
   topLinkSticky.addEventListener('mouseup', slideToTop);
+  topArrowBodySticky.addEventListener('mouseup', slideToTop);
 
+  var mainHeaderEl = document.getElementById('main-header');
+  var mainWrapEl = document.getElementById('main-content-wrap');
+  var projectsEl = document.getElementById('projects');
+  var additorProjectEl = document.getElementById('additor');
+  var weathervaneProjectEl = document.getElementById('weathervane');
+  var jsLiveWidgetsProjectEl = document.getElementById('js-live-widgets');
+  var canvasAnimationsProjectEl = document.getElementById('canvas-animations');
+  var ghostDancingProjectEl = document.getElementById('ghost-dancing');
+  var dissertationProjectEl = document.getElementById('dissertation');
+  var fastPastDanceProjectEl = document.getElementById('fast-past-dance');
+  var jhfPhotoboothProjectEl = document.getElementById('jhf-photobooth');
+  var resumeEl = document.getElementById('resume');
+  var contactEl = document.getElementById('contact');
+
+  function slideToTop () {
+    slideToElement( mainHeaderEl );
+  }
   function slideToProjects () {
-    slideToElement(document.getElementById('projects'));
+    slideToElement( projectsEl );
   }
   function slideToResume () {
-    slideToElement(document.getElementById('resume'));
+    slideToElement( resumeEl );
   }
   function slideToContact () {
-    slideToElement(document.getElementById('contact'));
-  }
-  function slideToTop () {
-    slideToElement(document.body);
+    slideToElement( contactEl );
   }
 
-  function slideToElement (element) {
-    toY = element.getBoundingClientRect().top + window.scrollY - stickyNav.clientHeight;
+  function slideToElement ( element ) {
+    var targetY = element.getBoundingClientRect().top + window.scrollY;
 
     smoothSlide();
 
     function smoothSlide() {
-      window.scrollTo(0, (Math.trunc(
-                            window.scrollY +
-                              ((toY - window.scrollY)/10))
-                         )
-                     );
-      if (Math.abs(window.scrollY - toY) > 10
-          && (window.scrollY + window.innerHeight < document.body.clientHeight - 10)
-          && (window.scrollY > 5)) {
-            window.requestAnimationFrame(smoothSlide);
+      // scroll by amount 1/10th of the distance between current scroll and destination, or 1px
+      var scrollDelta = (targetY - window.scrollY)/10;
+      var scrollToY = window.scrollY + scrollDelta;
+      window.scrollTo(0, scrollToY);
+
+      // check if reached target element, or reached bottom of the page, or reached top of the page
+      // if not reached, call the sliding function again on next animation frame
+      if (Math.abs(window.scrollY - targetY) > 10
+          && ((window.scrollY + window.innerHeight) < (document.body.clientHeight - 10))
+          && (window.scrollY > 1)) {
+          window.requestAnimationFrame(smoothSlide); // keep scrolling
       }
     }
   }
-  /* End clicking link sliding -----------------------------------------------*/
 
+  window.addEventListener('scroll', scrollEvent);
 
-  /* Sticky menu slideout ----------------------------------------------------*/
+  function scrollEvent (e) {
+    // 2. show the sticky navigation bar
+    window.requestAnimationFrame(toggleStickyNav);
+  }
 
-  window.addEventListener('scroll', toggleStickyNav);
+  function toggleStickyNav () {
+    if (window.scrollY < 10) {
+      stickyNav.style.transition = 'top 1s';
+      stickyNav.style.top = '-100px';
+    } else {
+      stickyNav.style.transition = 'top 1s';
+      stickyNav.style.top = '0px';
 
-  function toggleStickyNav(e) {
-    window.requestAnimationFrame(toggleStickyNavThrottle);
-
-
-    function toggleStickyNavThrottle () {
-      if (window.scrollY < 10) {
-        stickyNav.style.transition = 'top 1s';
-        stickyNav.style.top = '-100px';
-      } else {
-        stickyNav.style.transition = 'top 1s';
-        stickyNav.style.top = '0px';
-
-        if (window.scrollY > document.getElementById('projects').offsetTop) {
-          stickyNav.style.height = '3em';
-        }
+      if (window.scrollY > document.getElementById('projects').offsetTop) {
+        stickyNav.style.height = '3em';
       }
     }
   }

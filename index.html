@@ -3,10 +3,17 @@
 <head>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel='stylesheet' type='text/css' href='./styles/vsm22.min.css'>
-
-
+  <link rel='stylesheet' type='text/css' href='./assets/genericons/genericons.css'>
 </head>
 <body>
+  <div id='front-page-canvas-wrap'>
+    <canvas id='canvas-animation'></canvas>
+  </div>
+
+  <div id='sticky-return-to-top'>
+    <span class="genericon genericon-top"></span>
+  </div>
+
   <nav id='sticky-nav'>
     <div id='sticky-title'> Vladimir Smirnov </div>
     <ul id='sticky-site-nav'>
@@ -20,19 +27,21 @@
         <a id='contact-link-sticky'> contact </a>
       </li>
       <li>
-        <a id='top-link-sticky'> top </a>
+        <a>
+          <span id='top-link-sticky' class="genericon genericon-top"></span>
+        </a>
       </li>
     </ul>
     <nav class='external-links'>
       <ul>
         <li>
-          <a href=''><img src='./images/github_logo.png'></a>
+          <a href='https://github.com/vsm22' target='_blank'></a>
         </li>
         <li>
-          <a href=''><img src='./images/codepen_logo.png'></a>
+          <a href='http://codepen.io/collection/XOEYOr/' target='_blank'></a>
         </li>
         <li>
-          <a href=''><img src='./images/linkedin_logo.png'></a>
+          <a href='https://www.linkedin.com/in/vladimir-smirnov-463b6123' target='_blank'></a>
         </li>
     </nav>
   </nav>
@@ -41,6 +50,7 @@
     <h1 id='main-title'>
       <div> vladimir </div>
       <div> smirnov </div>
+
     </h1>
     <div id='main-description'>
       <h2>
@@ -66,19 +76,15 @@
     <nav class='external-links'>
       <ul>
         <li>
-          <a href=''><img src='./images/github_logo.png'></a>
+          <a href='https://github.com/vsm22' target='_blank'></a>
         </li>
         <li>
-          <a href=''><img src='./images/codepen_logo.png'></a>
+          <a href='http://codepen.io/collection/XOEYOr/' target='_blank'></a>
         </li>
         <li>
-          <a href=''><img class='linkedin' src='./images/linkedin_logo.png'></a>
+          <a href='https://www.linkedin.com/in/vladimir-smirnov-463b6123' target='_blank'></a>
         </li>
     </nav>
-  </div>
-
-  <div id='front-page-canvas-wrap'>
-    <canvas id='canvas-animation'></canvas>
   </div>
 
   <div id='main-content-wrap'>
@@ -152,7 +158,7 @@
         </div>
       </div>
 
-      <div class='project' id='jslivewidget'>
+      <div class='project' id='js-live-widgets'>
         <div class='project-header'>
           <h2> JSLiveWidgets </h2>
           <h3> a mini-library of canvas-based widgets </h3>
@@ -275,12 +281,6 @@
                   </ul>
                 </nav>
               </div> <!-- /.col-left -->
-
-              <div class='col-right'>
-                <div class='subsection-image-wrap'>
-                  <a href='./assets/double_rainbow_score.pdf' target='_blank'><img src='./images/doubleRainbow_small.png'></img></a>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -303,12 +303,6 @@
                   </ul>
                 </nav>
               </div>
-
-              <div class='col-right'>
-                <div class='subsection-image-wrap'>
-                  <img src='./images/appalachiana.png'></img>
-                </div>
-              </div>
             </div> <!-- /.subsection-block -->
           </div>
 
@@ -322,6 +316,7 @@
             </nav>
           </div>
       </div>
+    </div>
 
       <div class='project' id='fast-past-dance'>
         <div class='project-header'>
@@ -383,11 +378,11 @@
         <h1> Resume </h1>
       </div>
 
-      <div id='resume-pdf-version'>
-        <a href='' target='_blank'>pdf version</a>
-      </div>
-
       <div id='resume-list'>
+        <div id='resume-pdf-version'>
+          <a href='' target='_blank'>pdf version</a>
+        </div>
+
         <ul>
           <li class='resume-section'>
             <h4> Skills </h4>
@@ -463,14 +458,18 @@
   </div>
 
     <!-- Links -->
-    <div class='section' id='links'>
+    <div class='section' id='contact'>
       <div class='section-title'>
-        <h1> Links </h1>
+        <h1> Contact </h1>
       </div>
 
       <div id='profile-picture-wrap'>
         <img src='./images/profile_cut_lighter.png' id='profile-picture'></img>
       </div>
+
+      <div> email: <a href='mailto:vssmirnov@gmail.com'>vssmirnov@gmail.com</a> </div>
+      <div> phone: 703 462 0046 </div>
+
       <ul>
         <li>
           <a href='https://github.com/vsm22'> Github </a>
@@ -482,14 +481,6 @@
           <a href='http://codepen.io/vladvladvlad/'> Codepen </a>
         </li>
       </ul>
-
-      <!-- Contact -->
-      <div class='section-title' id='contact'>
-        <h1> Contact </h1>
-      </div>
-
-      <div> email: <a href='mailto:vssmirnov@gmail.com'>vssmirnov@gmail.com</a> </div>
-      <div> phone: 703 462 0046 </div>
     </div>
   </div>
 </body>
