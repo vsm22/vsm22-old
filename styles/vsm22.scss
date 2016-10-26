@@ -34,6 +34,7 @@ h2 {
 
 h3 {
   margin-top: 0.5em;
+  margin-bottom: 0;
   padding: 0;
   display: inline-block;
   font-family: $secondaryFontFamily;
@@ -43,6 +44,10 @@ h3 {
 }
 
 h4 {
+  margin: 0;
+  padding: 0;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
   color: hsl(0,0, 16%);
 }
 
@@ -93,15 +98,6 @@ ul {
       color: $linkHoverColor;
     }
   }
-}
-
-#main-content-wrap {
-  position: relative;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
-  background-color: rgba(255,255,255, 0);
 }
 
 #main-header {
@@ -264,10 +260,10 @@ ul {
   box-shadow: 0px 1px 2px 0px #333;
 
   #sticky-title {
-    position: relative;
+    position: absolute;
     display: inline-block;
     width: 10em;
-    margin-left: 2em;
+    left: 1em;
     font-weight: 800;
     color: hsl(0,0,70%);
   }
@@ -310,11 +306,10 @@ ul {
   }
 
   .external-links {
-    position: relative;
+    position: absolute;
     display: inline-block;
     top: 0;
     right: 0;
-    text-align: right;
     width: auto;
     min-width: 10em;
 
@@ -330,10 +325,20 @@ ul {
   }
 }
 
+#main-content-wrap {
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  background-color: rgba(255,255,255, 0);
+}
+
 #projects {
   position: relative;
-  padding: 4em;
-  background-color: rgba(255,255,255,0);
+  margin: 0;
+  padding: 4em 4em 0em 4em;
+  background-color: hsla(0,0,100%,1);
 
   .project {
     position: relative;
@@ -344,13 +349,45 @@ ul {
     margin-bottom: 1em;
     border: 1px solid hsl(0,0,80%);
     padding: 1.5em;
-    background-color: rgba(255,255,255,0.6);
+    background-color: rgba(255,255,255,1);
     box-shadow: 1px 1px 1px 0px #ccc;
 
     .project-header {
       display: block;
       width: 100%;
       padding: 2em 2em 0em 2em;
+    }
+
+    .projects-flip-nav {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 1.5em;
+
+      .prev-project-arrow, .next-project-arrow {
+        position: absolute;
+        display: inline-block;
+        font-family: 'Genericons';
+        font-size: 2.2em;
+        color: hsl(0,0,20%);
+        &:hover {
+          color: $linkHoverColor;
+        }
+      }
+      .prev-project-arrow {
+        top: 0;
+        left: 0;
+        &:before {
+          content: '\f430';
+        }
+      }
+      .next-project-arrow {
+        top: 0;
+        right: 0;
+        &:before {
+          content: '\f429';
+        }
+      }
     }
 
     .project-image {
@@ -399,6 +436,7 @@ ul {
       .project-description {
         display: inline-block;
         width: auto;
+        margin: 0;
         text-align: left;
         line-height: 2em;
         color: hsl(0,0,16%);
@@ -509,6 +547,9 @@ ul {
 }
 
 #resume {
+  position: relative;
+  margin: 4em 4em 0em 4em;
+  box-shadow: 1px 1px 1px 0px #ccc;
 
   #resume-pdf-version {
     display: inline-block;
@@ -519,7 +560,7 @@ ul {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 4em;
+    margin-top: 2em;
     padding: 4em 1em 3em 3em;
     color: hsl(0,0,20%);
     font-weight: 800;
@@ -594,27 +635,58 @@ ul {
 }
 
 #contact {
-  min-height: 800px;
-  width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 1px 1px 1px;
-  background-color: hsla(0, 0, 100%, 0.7);
-  box-shadow: 1px 1px 3px 1px hsl(0, 0, 70%);
+  position: relative;
+  text-align: center;
+  margin: 4em 4em 0em 4em;
+  box-shadow: 1px 1px 1px 0px #ccc;
+  min-height: 100vh;
 }
 
-#profile-picture-wrap {
+#contact-sheet {
   position: relative;
-  float: right;
-  clear: top;
-  max-width: 250px;
-  margin-right: 7em;
+  width: 28em;
+  height: 20em;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2em 4em 2em 4em;
+  text-align: left;
+  background-color: hsla(0, 0, 100%, 0.7);
+  box-shadow: 1px 1px 3px 1px hsl(0, 0, 70%);
 
-  img {
+  a {
+    color: hsl(0,0,20%);
+  }
+
+  #profile-picture-wrap {
+    position: relative;
+    float: right;
+    max-width: 180px;
+    margin-right: 0.5em;
+
+    img {
+      display: inline-block;
+      width: auto;
+      max-width: 100%;
+      border-radius: 5%;
+    }
+  }
+
+  .external-links {
+    position: relative;
     display: inline-block;
+    padding: 0;
+    margin: 0;
+    margin-top: 5em;
     width: auto;
-    max-width: 100%;
-    border-radius: 5%;
+    max-width: 20em;
+
+    li {
+      a {
+        padding: 0;
+        margin: 0;
+      }
+    }
   }
 }
 
@@ -639,7 +711,7 @@ ul {
     flex-wrap: nowrap;
 
     #sticky-title {
-      visibility: hidden;
+      display: none;
     }
 
     #sticky-site-nav {
@@ -649,7 +721,7 @@ ul {
     }
 
     .external-links {
-      visibility: hidden;
+      display: none;
     }
   }
 
@@ -700,6 +772,22 @@ ul {
   }
   h3 {
     font-size: 1em;
+  }
+
+  #sticky-site-nav {
+    display: inline-block;
+    min-width: 1em;
+    width: auto;
+
+    li {
+      font-size: 0.9em;
+      margin-right: 0;
+      letter-spacing: 0;
+
+      a {
+        letter-spacing: 3em;
+      }
+    }
   }
 
   #main-header {

@@ -189,7 +189,7 @@
       let newT = new Tesseract({
         canvas: canvas,
         ox: Math.random() * canvas.width,
-        oy: canvas.height * 0.8,
+        oy: canvas.height / 2,
         dim: Math.random()*200 + 100,
         rotX: 5,
         rotY: 1,

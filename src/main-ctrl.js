@@ -1,4 +1,4 @@
-(function(){
+$(function() {
   'use strict';
 
   var mainNav = document.getElementById('main-nav');
@@ -12,16 +12,6 @@
   var contactLinkSticky = document.getElementById('contact-link-sticky');
   var topLinkSticky = document.getElementById('top-link-sticky');
   var topArrowBodySticky = document.getElementById('sticky-return-to-top');
-
-  /* Clicking link sliding ---------------------------------------------------*/
-  projectsLink.addEventListener('mouseup', slideToProjects);
-  projectsLinkSticky.addEventListener('mouseup', slideToProjects);
-  resumeLink.addEventListener('mouseup', slideToResume);
-  resumeLinkSticky.addEventListener('mouseup', slideToResume);
-  contactLink.addEventListener('mouseup', slideToContact);
-  contactLinkSticky.addEventListener('mouseup', slideToContact);
-  topLinkSticky.addEventListener('mouseup', slideToTop);
-  topArrowBodySticky.addEventListener('mouseup', slideToTop);
 
   var mainHeaderEl = document.getElementById('main-header');
   var mainWrapEl = document.getElementById('main-content-wrap');
@@ -37,44 +27,24 @@
   var resumeEl = document.getElementById('resume');
   var contactEl = document.getElementById('contact');
 
-  function slideToTop () {
-    slideToElement( mainHeaderEl );
-  }
-  function slideToProjects () {
-    slideToElement( projectsEl );
-  }
-  function slideToResume () {
-    slideToElement( resumeEl );
-  }
-  function slideToContact () {
-    slideToElement( contactEl );
-  }
+  $('#main-nav a, #sticky-nav a, #sticky-return-to-top a').on('click', function () {
+    slideToElement($(this.hash));
+  });
+  $('.projects-flip-nav a').on('click', function () {
+    slideToElement($(this.hash), -60);
+  });
 
-  function slideToElement ( element ) {
-    var targetY = element.getBoundingClientRect().top + window.scrollY;
+  function slideToElement (element, yOffset) {
+    var yOffset = yOffset || 0;
 
-    smoothSlide();
-
-    function smoothSlide() {
-      // scroll by amount 1/10th of the distance between current scroll and destination, or 1px
-      var scrollDelta = (targetY - window.scrollY)/10;
-      var scrollToY = window.scrollY + scrollDelta;
-      window.scrollTo(0, scrollToY);
-
-      // check if reached target element, or reached bottom of the page, or reached top of the page
-      // if not reached, call the sliding function again on next animation frame
-      if (Math.abs(window.scrollY - targetY) > 10
-          && ((window.scrollY + window.innerHeight) < (document.body.clientHeight - 10))
-          && (window.scrollY > 1)) {
-          window.requestAnimationFrame(smoothSlide); // keep scrolling
-      }
-    }
+    $('html, body').animate({
+      scrollTop: $(element).offset().top + yOffset
+    }, 1000);
   }
 
   window.addEventListener('scroll', scrollEvent);
 
   function scrollEvent (e) {
-    // 2. show the sticky navigation bar
     window.requestAnimationFrame(toggleStickyNav);
   }
 
