@@ -90,7 +90,7 @@ ul {
     width: 100%;
     height: 100%;
     font-size: 4em;
-    background-color: hsl(0,0%, 80%);
+    background-color: hsla(0,0%, 100%, 0.5);
     color: hsl(0,0%,20%);
 
     &:hover {
@@ -337,16 +337,19 @@ ul {
 #projects {
   position: relative;
   margin: 0;
-  padding: 4em 4em 0em 4em;
-  background-color: hsla(0,0,100%,1);
+  padding: 4em 2em 0em 2em;
+  background-color: hsla(220,10%,10%,1);
 
   .project {
     position: relative;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
     margin-top: 2em;
     margin-bottom: 1em;
+    min-height: 100vh;
     border: 1px solid hsl(0,0,80%);
     padding: 1.5em;
     background-color: rgba(255,255,255,1);
@@ -380,11 +383,19 @@ ul {
         &:before {
           content: '\f430';
         }
+        &:after {
+          font-size: 0.6em;
+          content: 'prev proj';
+        }
       }
       .next-project-arrow {
         top: 0;
         right: 0;
         &:before {
+          font-size: 0.6em;
+          content: 'next proj';
+        }
+        &:after {
           content: '\f429';
         }
       }
@@ -572,12 +583,13 @@ ul {
     }
 
     .resume-section {
-      margin-top: 1.3em;
-      color: hsl(0,0,20%);
+      margin-top: 0.1em;
       padding: 0;
+      color: hsl(0,0,20%);
+
 
       h4 {
-        margin-bottom: 1em;
+        margin-bottom: 0.5em;
       }
 
       & ul {
@@ -604,6 +616,11 @@ ul {
       &>li {
         margin-bottom: 0.8em;
       }
+    }
+
+    .experience-description {
+      padding-top: 0.3em;
+      font-size: 0.9em;
     }
 
     #additional-coursework {

@@ -260,8 +260,8 @@
   }
   function mouseMove () {
     tesseracts.forEach(function(t) {
-      t.xStep += ((mouseX - t.ox)) * Math.random()*0.0001;
-      t.yStep = ((mouseY - t.oy)) * Math.random()*0.004;
+      t.xStep += ((mouseX - t.ox)) * Math.random()*0.0003;
+      t.yStep = ((mouseY - t.oy)) * Math.random()*0.0055;
     });
   }
 
