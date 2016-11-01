@@ -338,7 +338,7 @@ ul {
   position: relative;
   margin: 0;
   padding: 4em 2em 0em 2em;
-  background-color: hsla(220,10%,10%,1);
+  background-color: hsla(220,0%,100%,1);
 
   .project {
     position: relative;
@@ -385,7 +385,6 @@ ul {
         }
         &:after {
           font-size: 0.6em;
-          content: 'prev proj';
         }
       }
       .next-project-arrow {
@@ -393,7 +392,6 @@ ul {
         right: 0;
         &:before {
           font-size: 0.6em;
-          content: 'next proj';
         }
         &:after {
           content: '\f429';
@@ -653,7 +651,6 @@ ul {
 
 #contact {
   position: relative;
-  text-align: center;
   margin: 4em 4em 0em 4em;
   box-shadow: 1px 1px 1px 0px #ccc;
   min-height: 100vh;
@@ -669,7 +666,6 @@ ul {
   padding: 2em 4em 2em 4em;
   text-align: left;
   background-color: hsla(0, 0, 100%, 0.7);
-  box-shadow: 1px 1px 3px 1px hsl(0, 0, 70%);
 
   a {
     color: hsl(0,0,20%);
