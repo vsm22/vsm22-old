@@ -210,37 +210,34 @@ ul {
   li {
     display: inline-block;
 
-    &:nth-child(1) {
-      a {
-        &:before {
-          content: '\f200';
-        }
+    a {
+      font-family: 'Genericons';
+      color: hsl(0,0,20%);
+      font-size: 3em;
+      &:hover {
+        color: $linkHoverColor;
       }
     }
-    &:nth-child(2) {
-      a {
-        &:before {
-          content: '\f216';
-        }
+
+    a.githubIcon {
+      &:before {
+        content: '\f200';
       }
     }
-    &:nth-child(3) {
-      a {
-        &:before {
-          content: '\f208';
-        }
+    a.codepenIcon {
+      &:before {
+        content: '\f216';
       }
     }
+    a.linkedInIcon {
+      &:before {
+        content: '\f208';
+      }
+    }
+
   }
 
-  a {
-    font-family: 'Genericons';
-    color: hsl(0,0,20%);
-    font-size: 3em;
-    &:hover {
-      color: $linkHoverColor;
-    }
-  }
+
 }
 
 #sticky-nav {
