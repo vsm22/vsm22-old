@@ -3,7 +3,6 @@
 
 $mainFontFamily: 'Arial', Arial, sans-serif;
 $secondaryFontFamily: 'Arial', Arial, sans-serif;
-
 $linkHoverColor: hsl(0,60%,50%);
 
 body {
@@ -184,7 +183,6 @@ ul {
       }
     }
 
-    // prevent the line over the menu from moving past menu items
     li:nth-child(4) {
       a {
         margin-right: 0;
@@ -234,10 +232,7 @@ ul {
         content: '\f208';
       }
     }
-
   }
-
-
 }
 
 #sticky-nav {

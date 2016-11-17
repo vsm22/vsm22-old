@@ -4,7 +4,16 @@
   "description": "Vladimir Smirnov's portfolio",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d build"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ],
+    "plugins": [
+      "transform-es2015-arrow-functions"
+    ]
   },
   "repository": {
     "type": "git",
@@ -19,6 +28,7 @@
   "devDependencies": {
     "angular": "^1.5.8",
     "babel": "^6.5.2",
+    "babel-cli": "^6.18.0",
     "webpack": "^1.13.2"
   },
   "dependencies": {

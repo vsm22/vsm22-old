@@ -2,95 +2,98 @@
 <html>
 <head>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link rel='stylesheet' type='text/css' href='./styles/vsm22.min.css'>
+  <link rel='stylesheet' type='text/css' href='./styles/vsm22-2.min.css'>
   <link rel='stylesheet' type='text/css' href='./assets/genericons/genericons.css'>
 </head>
 <body>
-  <div id='front-page-canvas-wrap'>
-    <canvas id='canvas-animation'></canvas>
-  </div>
-
-  <div id='sticky-return-to-top'>
-    <a href='#main-header'>
-      <span class="genericon genericon-top"></span>
-    </a>
-  </div>
-
-  <nav id='sticky-nav'>
-    <div id='sticky-title'> Vladimir Smirnov </div>
-    <ul id='sticky-site-nav'>
-      <li>
-        <a id='projects-link-sticky' href='#projects'> projects </a>
-      </li>
-      <li>
-        <a id='resume-link-sticky' href='#resume'> resume </a>
-      </li>
-      <li>
-        <a id='contact-link-sticky' href='#contact'> contact </a>
-      </li>
-      <li>
-        <a href='#main-header'>
-          <span id='top-link-sticky' class="genericon genericon-top"></span>
-        </a>
-      </li>
-    </ul>
-    <nav class='external-links'>
-      <ul>
-        <li>
-          <a href='https://github.com/vsm22' class='githubIcon' target='_blank'></a>
-        </li>
-        <li>
-          <a href='https://www.linkedin.com/in/vladimir-smirnov-463b6123' class='linkedInIcon' target='_blank'></a>
-        </li>
-    </nav>
-  </nav>
-
-  <div id='main-header'>
-    <h1 id='main-title'>
-      <div> vladimir </div>
-      <div> smirnov </div>
-
-    </h1>
-    <div id='main-description'>
-      <h2>
-        <div> software & web developer </div>
-        <div> audio designer & engineer </div>
-      </h2>
+  <div class='page-container'>
+    <div id='front-page-canvas-wrap'>
+      <canvas id='canvas-animation'></canvas>
     </div>
 
-    <nav id='main-nav'>
-      <ul>
+    <div id='sticky-return-to-top'>
+      <a href='#main-header'>
+        <span class="genericon genericon-top"></span>
+      </a>
+    </div>
+
+    <nav id='sticky-nav'>
+      <div id='sticky-title'> Vladimir Smirnov </div>
+      <ul id='sticky-site-nav'>
         <li>
-          <a id='projects-link' href='#projects'> projects </a>
+          <a id='projects-link-sticky' href='#projects'> projects </a>
         </li>
         <li>
-          <a id='resume-link' href='#resume'> resume </a>
+          <a id='resume-link-sticky' href='#resume'> resume </a>
         </li>
         <li>
-          <a id='contact-link' href='#contact'> contact </a>
+          <a id='contact-link-sticky' href='#contact'> contact </a>
+        </li>
+        <li>
+          <a href='#main-header'>
+            <span id='top-link-sticky' class="genericon genericon-top"></span>
+          </a>
         </li>
       </ul>
+      <nav class='external-links'>
+        <ul>
+          <li>
+            <a href='https://github.com/vsm22' class='githubIcon' target='_blank'></a>
+          </li>
+          <li>
+            <a href='https://www.linkedin.com/in/vladimir-smirnov-463b6123' class='linkedInIcon' target='_blank'></a>
+          </li>
+      </nav>
     </nav>
 
-    <nav class='external-links'>
-      <ul>
-        <li>
-          <a href='https://github.com/vsm22' class='githubIcon' target='_blank'></a>
-        </li>
-        <li>
-          <a href='https://www.linkedin.com/in/vladimir-smirnov-463b6123' class='linkedInIcon' target='_blank'></a>
-        </li>
-    </nav>
-  </div>
+    <div id='main-header'>
+      <h1 id='main-title'>
+        <div> vladimir </div>
+        <div> smirnov </div>
+      </h1>
 
-  <div id='main-content-wrap'>
-    <!-- Projects -->
-    <div class='section' id='projects'>
-      <div class='section-title'>
-        <h1> Recent Projects </h1>
+      <div id='main-description'>
+        <h2>
+          <div> software & web developer </div>
+          <div> audio designer & engineer </div>
+        </h2>
       </div>
 
-      <div class='project' id='additor'>
+      <nav id='main-nav'>
+        <ul>
+          <li>
+            <a id='projects-link' href='#projects'> projects </a>
+          </li>
+          <li>
+            <a id='resume-link' href='#resume'> resume </a>
+          </li>
+          <li>
+            <a id='contact-link' href='#contact'> contact </a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class='external-links'>
+        <ul>
+          <li>
+            <a href='https://github.com/vsm22' class='githubIcon' target='_blank'></a>
+          </li>
+          <li>
+            <a href='https://www.linkedin.com/in/vladimir-smirnov-463b6123' class='linkedInIcon' target='_blank'></a>
+          </li>
+      </nav>
+    </div> <!-- /#main-header -->
+
+    <!-- #projects -->
+    <div class='section-container' id='projects'>
+
+      <div class='section-header'>
+        <div class='section-title'>
+          <h1> Recent Projects </h1>
+        </div>
+      </div>
+
+      <div class='subsection-container project' id='additor'>
         <nav class='projects-flip-nav'>
           <a href='#weathervane' class='next-project-arrow'></a>
         </nav>
@@ -106,8 +109,8 @@
 
         <div class='project-content'>
           <nav class='project-links'>
-            <a href='https://vsm22.github.io/additor' target='_blank'> Live Version </a>
-            <a href='https://github.com/vsm22/additor' target='_blank'> Source Code </a>
+            <span><a href='https://vsm22.github.io/additor' target='_blank'> Live Version </a><span>
+            <span><a href='https://github.com/vsm22/additor' target='_blank'> Source Code </a><span>
           </nav>
 
           <ul class='project-keywords'>
@@ -132,7 +135,7 @@
         </div>
       </div>
 
-      <div class='project' id='weathervane'>
+      <div class='subsection-container project' id='weathervane'>
         <nav class='projects-flip-nav'>
           <a href='#additor' class='prev-project-arrow'></a>
           <a href='#js-live-widgets' class='next-project-arrow'></a>
@@ -149,8 +152,8 @@
 
         <div class='project-content'>
           <nav class='project-links'>
-            <a href='https://vsm22.github.io/weathervane' target='_blank'> Live Version </a>
-            <a href='https://github.com/vsm22/weathervane' target='_blank'> Source Code </a>
+            <span><a href='https://vsm22.github.io/weathervane' target='_blank'> Live Version </a></span>
+            <span><a href='https://github.com/vsm22/weathervane' target='_blank'> Source Code </a></span>
           </nav>
 
           <ul class='project-keywords'>
@@ -170,7 +173,7 @@
         </div>
       </div>
 
-      <div class='project' id='js-live-widgets'>
+      <div class='subsection-container project' id='js-live-widgets'>
         <nav class='projects-flip-nav'>
           <a href='#weathervane' class='prev-project-arrow'></a>
           <a href='#ghost-dancing' class='next-project-arrow'></a>
@@ -187,7 +190,7 @@
 
         <div class='project-content'>
           <nav class='project-links'>
-            <a href='https://github.com/vsm22/JSSynthUI' target='_blank'> Source Code </a>
+            <span><a href='https://github.com/vsm22/JSSynthUI' target='_blank'> Source Code </a></span>
           </nav>
 
           <ul class='project-keywords'>
@@ -207,7 +210,7 @@
         </div>
       </div>
 
-      <div class='project' id='ghost-dancing'>
+      <div class='subsection-container project' id='ghost-dancing'>
         <nav class='projects-flip-nav'>
           <a href='#js-live-widgets' class='prev-project-arrow'></a>
           <a href='#dissertation' class='next-project-arrow'></a>
@@ -224,7 +227,7 @@
 
         <div class='project-content'>
           <nav class='project-links'>
-            <a href='http://vladimirsmirnov.bandcamp.com/album/ghost-dancing' target='_blank'> Audio </a>
+            <span><a href='http://vladimirsmirnov.bandcamp.com/album/ghost-dancing' target='_blank'> Audio </a></span>
           </nav>
 
           <ul class='project-keywords'>
@@ -242,7 +245,7 @@
         </div>
       </div>
 
-      <div class='project' id='dissertation'>
+      <div class='subsection-container project' id='dissertation'>
         <nav class='projects-flip-nav'>
           <a href='#ghost-dancing' class='prev-project-arrow'></a>
           <a href='#fast-past-dance' class='next-project-arrow'></a>
@@ -266,8 +269,8 @@
           <h4> Part 1: Acoustic composition "Double Rainbow" (10 instruments, ca. 35 mins) </h4>
 
           <nav class='project-links'>
-            <a href='http://vladimirsmirnov.bandcamp.com/album/double-rainbow' target='_blank'> Audio </a>
-            <a href='./assets/double_rainbow_score.pdf' target='_blank'> Score </a>
+            <span><a href='http://vladimirsmirnov.bandcamp.com/album/double-rainbow' target='_blank'> Audio </a></span>
+            <span><a href='./assets/double_rainbow_score.pdf' target='_blank'> Score </a></span>
           </nav>
 
           <p class='project-description'>
@@ -278,7 +281,7 @@
           <h4> Part 2: Electronic composition "Appalachiana" (Max, Logic, ca. 35 mins) </h4>
 
           <nav class='project-links'>
-            <a href='http://vladimirsmirnov.bandcamp.com/album/appalachiana' target='_blank'> Audio </a>
+            <span><a href='http://vladimirsmirnov.bandcamp.com/album/appalachiana' target='_blank'> Audio </a><span>
           </nav>
 
           <p class='project-description'>
@@ -288,7 +291,7 @@
           <h4> Part 3: Music theory article "'The Invisible Mass': Compositional Technique in Alfred Schnittke's 2nd Symphony" </h4>
 
           <nav class='project-links'>
-            <a href='./assets/InvisibleMassSchnittkeArticle.pdf' target='_blank'> pdf </a>
+            <span><a href='./assets/InvisibleMassSchnittkeArticle.pdf' target='_blank'> pdf </a></span>
           </nav>
 
           <p class='project-description'>
@@ -297,7 +300,7 @@
       </div>
     </div>
 
-      <div class='project' id='fast-past-dance'>
+      <div class='subsection-container project' id='fast-past-dance'>
         <nav class='projects-flip-nav'>
           <a href='#dissertation' class='prev-project-arrow'></a>
           <a href='#jhf-photobooth' class='next-project-arrow'></a>
@@ -314,7 +317,7 @@
 
         <div class='project-content'>
           <nav class='project-links'>
-            <a href='https://vladimirsmirnov.bandcamp.com/album/fastpastdance' target='_blank'> Audio </a>
+            <span><a href='https://vladimirsmirnov.bandcamp.com/album/fastpastdance' target='_blank'> Audio </a></span>
           </nav>
 
           <ul class='project-keywords'>
@@ -330,7 +333,7 @@
         </div>
       </div>
 
-      <div class='project' id='jhf-photobooth'>
+      <div class='subsection-container project' id='jhf-photobooth'>
         <nav class='projects-flip-nav'>
           <a href='#fast-past-dance' class='prev-project-arrow'></a>
         </nav>
@@ -346,7 +349,7 @@
 
         <div class='project-content'>
           <nav class='project-links'>
-            <a href='https://github.com/vsm22/VideoPhotoBooth-for-John-Hope-Franklin-Centennial' target='_blank'> Code </a>
+            <span><a href='https://github.com/vsm22/VideoPhotoBooth-for-John-Hope-Franklin-Centennial' target='_blank'> Code </a></span>
           </nav>
 
           <ul class='project-keywords'>
@@ -364,16 +367,19 @@
     </div> <!-- /#projects -->
 
 
-    <!-- Resume -->
-    <div id='resume' class='section'>
-      <div class='section-title'>
-        <h1> Resume </h1>
+    <!-- #resume -->
+    <div class='section-container' id='resume'>
+
+      <div class='section-header'>
+        <div class='section-title'>
+          <h1> Resume </h1>
+        </div>
       </div>
 
-      <div id='resume-list'>
-        <div id='resume-pdf-version'>
-          <a href='./assets/Vladimir_Smirnov_Resume.doc' download target='_blank'>word format</a>
-          <a href='./assets/Vladimir_Smirnov_Resume.pdf' target='_blank'>pdf format</a>
+      <div class='subsection-container' id='resume-list'>
+        <div id='resume-links'>
+          <span><a href='./assets/Vladimir_Smirnov_Resume.doc' download target='_blank'>word format</a></span>
+          <span><a href='./assets/Vladimir_Smirnov_Resume.pdf' target='_blank'>pdf format</a></span>
         </div>
 
         <ul>
@@ -430,16 +436,17 @@
     </div> <!-- /.resume-list -->
   </div>
 
-    <!-- Links -->
-    <div class='section' id='contact'>
-      <div class='section-title'>
-        <h1> Contact </h1>
+    <!-- #links -->
+    <div class='section-container' id='contact'>
+
+      <div class='section-header'>
+        <div class='section-title'>
+          <h1> Contact </h1>
+        </div>
       </div>
 
-      <div id='contact-sheet'>
-        <div id='profile-picture-wrap'>
-          <img src='./images/profile_cut_lighter.png' id='profile-picture'></img>
-        </div>
+      <div class='subsection-container' id='contact-sheet'>
+
 
         <nav class='external-links'>
           <ul>
@@ -452,14 +459,18 @@
         </nav>
 
         <div> <a href='mailto:vssmirnov@gmail.com'>vssmirnov@gmail.com</a> </div>
+        <div id='profile-picture-wrap'>
+          <img src='./images/profile.png' id='profile-picture'></img>
+        </div>
       </div>
-    </div>
-  </div>
+    </div> <!-- /#contact-sheet -->
+
+  </div> <!-- /.page-container -->
 </body>
 
   <script src='./lib/jquery.min.js'></script>
-  <script src='./src/animations/tesseracts2.js'></script>
-  <script src='./src/main-ctrl.js'></script>
+  <script src='./build/animations/tesseracts2.js'></script>
+  <script src='./build/main-ctrl.js'></script>
 
 </body>
 </html>

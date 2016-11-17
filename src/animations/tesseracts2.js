@@ -28,11 +28,6 @@
       this.color = o.color || 'red';
       this.lineWidth = o.lineWidth || 1;
 
-      /* v1tl = vertex on plane 1 top left
-       * v1tr = vertex on plane 1 top right
-       * etc...
-       */
-
       this._vertices = this._generateVertices();
 
       this.bgGradient = this._ctx.createLinearGradient(0, 0, 0, this._canvas.height);
@@ -181,7 +176,11 @@
     }
   }
 
+  /* --- end Tesseract class definition --- */
+
   let tesseracts = [];
+  let animationIsRunning = true,
+      resumeAnimationTimeoutIsSet = false;
 
   function createTesseracts (numTesseracts) {
     for (let i = 0; i < numTesseracts; i++) {
@@ -245,11 +244,29 @@
       }
     }
 
-    window.requestAnimationFrame(animateTesseracts);
+    if (animationIsRunning === true)
+      window.requestAnimationFrame(animateTesseracts);
   }
 
   createTesseracts(10);
   animateTesseracts();
+
+  window.addEventListener('scroll', throttlePauseAnimation);
+  function throttlePauseAnimation () {
+    window.requestAnimationFrame(pauseAnimation);
+  }
+  function pauseAnimation() {
+    animationIsRunning = false;
+
+    if (resumeAnimationTimeoutIsSet === false) {
+      resumeAnimationTimeoutIsSet = true;
+      window.setTimeout(function () {
+        animationIsRunning = true;
+        animateTesseracts();
+        resumeAnimationTimeoutIsSet = false;
+      }, 100);
+    }
+  }
 
   let mouseX,mouseY;
   window.addEventListener('mousemove', throttleMove);
@@ -266,11 +283,14 @@
   }
 
   window.addEventListener('resize', throttleResize);
+
   function throttleResize() {
     window.requestAnimationFrame(resizeCanvas);
-  };
+  }
   function resizeCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
   }
+
+
 })();
